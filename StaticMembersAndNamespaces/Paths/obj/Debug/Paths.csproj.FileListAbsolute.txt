@@ -1,0 +1,1 @@
+D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\Paths\bin\Debug\Paths.exe.config
