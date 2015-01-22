@@ -1,21 +1,22 @@
 ﻿using System;
+using System.Text;
 
 namespace Persons
 {
     class Person
     {
         private string name;
-        private int age;
+        private byte age;
         private string email;
 
-        public Person(string name, int age, string email)
+        public Person(string name, byte age, string email)
         {
             this.Name = name;
             this.Age = age;
             this.Email = email;
         }
 
-        public Person(string name, int age) : this(name, age, null) { }
+        public Person(string name, byte age) : this(name, age, null) { }
 
         public string Name
         {
@@ -30,12 +31,12 @@ namespace Persons
             }
         }
 
-        public int Age
+        public byte Age
         {
             get { return this.age; }
             private set
             {
-                if ((value < 0) || (value > 100))
+                if (value > 100)
                 {
                     throw new ArgumentOutOfRangeException("Age must be between [0...100]");
                 }
@@ -58,11 +59,13 @@ namespace Persons
 
         public override string ToString()
         {
+            StringBuilder b = new StringBuilder();
+            b.AppendFormat("I am {0}. I am {1} years old.", this.Name, this.Age);
             if (!string.IsNullOrEmpty(this.email))
             {
-                return "I am " + this.Name + ". I am " + this.Age + " years old. My email is: " + this.Email;
+                b.AppendFormat("My email is: {0}", this.Email);
             }
-            return "I am " + this.Name + ". I am " + this.Age + " years old.";
+            return b.ToString();
         }
     }
 

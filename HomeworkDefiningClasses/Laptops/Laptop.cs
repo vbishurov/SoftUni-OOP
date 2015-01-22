@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Laptops
 {
@@ -82,7 +79,7 @@ namespace Laptops
             get { return this.ram; }
             set
             {
-                int amount = Int32.Parse(Regex.Match(value, @"-?\d+").Value);
+                var amount = Int32.Parse(Regex.Match(value, @"-?\d+").Value);
                 if (value != null && value.Length < 1)
                 {
                     throw new ArgumentException("Ram cannot be empty");
@@ -115,7 +112,7 @@ namespace Laptops
             {
                 if (value != null)
                 {
-                    int size = Int32.Parse(Regex.Match(value, @"-?\d+").Value);
+                    var size = Int32.Parse(Regex.Match(value, @"-?\d+").Value);
                     if (size < 0)
                     {
                         throw new ArgumentOutOfRangeException("HDD size cannot be negative");
@@ -143,11 +140,7 @@ namespace Laptops
             }
         }
 
-        public Battery Battery
-        {
-            get { return this.battery; }
-            set { this.battery = value; }
-        }
+        public Battery Battery { get; set; }
 
         public decimal Price
         {
@@ -164,38 +157,40 @@ namespace Laptops
 
         public override string ToString()
         {
-            string laptop = "Model: " + this.Model;
+            StringBuilder b = new StringBuilder();
+            b.AppendLine("Model: " + this.Model);
             if (this.Manufacturer != null)
             {
-                laptop += Environment.NewLine + "Manufacturer: " + this.Manufacturer;
+                b.AppendLine("Manufacturer: " + this.Manufacturer);
             }
             if (this.Processor != null)
             {
-                laptop += Environment.NewLine + "Processor: " + this.Processor;
+                b.AppendLine("Processor: " + this.Processor);
             }
             if (this.Ram != null)
             {
-                laptop += Environment.NewLine + "RAM: " + this.Ram;
+                b.Append("RAM: " + this.Ram);
                 if (Regex.IsMatch(this.ram, @"^\d+$")) 
                 {
-                    laptop += " GB";
+                    b.Append(" GB");
                 }
+                b.AppendLine();
             }
             if (this.Hdd != null)
             {
-                laptop += Environment.NewLine + "HDD: " + this.Hdd;
+                b.AppendLine("HDD: " + this.Hdd);
             }
             if (this.Screen != null)
             {
-                laptop += Environment.NewLine + "Screen: " + this.Screen;
+                b.AppendLine("Screen: " + this.Screen);
             }
             if (this.Battery != null)
             {
-                laptop += Environment.NewLine + this.Battery;
+                b.AppendLine(this.Battery.ToString());
             }
-            laptop += Environment.NewLine + "Price: " + this.Price;
+            b.Append("Price: " + this.Price);
 
-            return laptop;
+            return b.ToString();
         }
     }
 }

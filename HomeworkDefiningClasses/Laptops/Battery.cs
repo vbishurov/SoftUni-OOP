@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Laptops
 {
     class Battery
     {
-        //Fields
         private string type;
         private float life;
 
-        //Constructors
         public Battery(string type)
         {
             this.Type = type;
@@ -24,7 +19,6 @@ namespace Laptops
             this.Life = life;
         }
 
-        //Properties
         public string Type
         {
             get { return this.type; }
@@ -53,16 +47,17 @@ namespace Laptops
 
         public override string ToString()
         {
-            string result = null;
+            StringBuilder b = new StringBuilder();
             if (this.Type != null)
             {
-                result = "Battery: " + this.Type;
+                b.AppendFormat("Battery: {0}", this.Type);
             }
             if (this.Life > 0)
             {
-                result += Environment.NewLine + "Battery Life: " + this.Life + " hours";
+                b.AppendLine();
+                b.AppendFormat("Battery Life: {0} hours", this.Life);
             }
-            return result;
+            return b.ToString();
         }
     }
 }

@@ -4,3 +4,9 @@ D:\My Documents\workspace\SoftUniCSharpBasics\HomeworkDefiningClasses\Laptops\bi
 D:\My Documents\workspace\SoftUniCSharpBasics\HomeworkDefiningClasses\Laptops\obj\Debug\Laptops.csprojResolveAssemblyReference.cache
 D:\My Documents\workspace\SoftUniCSharpBasics\HomeworkDefiningClasses\Laptops\obj\Debug\Laptops.exe
 D:\My Documents\workspace\SoftUniCSharpBasics\HomeworkDefiningClasses\Laptops\obj\Debug\Laptops.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\Laptops\bin\Debug\Laptops.exe.config
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\Laptops\obj\Debug\Laptops.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\Laptops\obj\Debug\Laptops.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\Laptops\bin\Debug\Laptops.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\Laptops\bin\Debug\Laptops.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\Laptops\obj\Debug\Laptops.csprojResolveAssemblyReference.cache
