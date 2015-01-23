@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace Space3D
 {
@@ -34,6 +35,17 @@ namespace Space3D
             {
                 return Point3D.startingPoint;
             }
+        }
+
+        public static double[] ExtractPoint(string line)
+        {
+            Regex re = new Regex(@"{ (\d+\.?\d*), (\d+\.?\d*), (\d+\.?\d*) }");
+            Match match = re.Match(line);
+            double[] result = new double[3];
+            result[0] = double.Parse(match.Groups[1].Value);
+            result[1] = double.Parse(match.Groups[2].Value);
+            result[2] = double.Parse(match.Groups[3].Value);
+            return result;
         }
 
         public override string ToString()

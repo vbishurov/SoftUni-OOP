@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6673723C-13FD-4245-8EE0-25F238885E93}</ProjectGuid>
+    <ProjectGuid>{12415495-E032-41CB-8E90-22501DDBAEA1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Namespaces</RootNamespace>
-    <AssemblyName>Namespaces</AssemblyName>
+    <RootNamespace>HTMLDispatcher</RootNamespace>
+    <AssemblyName>HTMLDispatcher</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,23 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Geometry.Geometry2D\Circle.cs" />
-    <Compile Include="Geometry.Geometry2D\DistanceCalculator2D.cs" />
-    <Compile Include="Geometry.Geometry2D\Ellipse.cs" />
-    <Compile Include="Geometry.Geometry2D\Figure2D.cs" />
-    <Compile Include="Geometry.Geometry2D\Point2D.cs" />
-    <Compile Include="Geometry.Geometry2D\Polygon.cs" />
-    <Compile Include="Geometry.Geometry2D\Rectangle.cs" />
-    <Compile Include="Geometry.Geometry2D\Square.cs" />
-    <Compile Include="Geometry.Geometry3D\DistanceCalculator3D.cs" />
-    <Compile Include="Geometry.Geometry3D\Path3D.cs" />
-    <Compile Include="Geometry.Geometry3D\Point3D.cs" />
-    <Compile Include="Geometry.Storage\GeometryBinaryStorage.cs" />
-    <Compile Include="Geometry.Storage\GeometrySVGStorage.cs" />
-    <Compile Include="Geometry.Storage\GeometryXMLStorage.cs" />
-    <Compile Include="Geometry.UI\Screen2D.cs" />
-    <Compile Include="Geometry.UI\Screen3D.cs" />
-    <Compile Include="Namespaces.cs" />
+    <Compile Include="ElementBuilder.cs" />
+    <Compile Include="HTMLDispatcher.cs" />
+    <Compile Include="HTMLDispatcherTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

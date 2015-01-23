@@ -1,0 +1,3 @@
+D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\Geometry\bin\Debug\Geometry.exe.config
+D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\Geometry\obj\Debug\Geometry.exe
+D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\Geometry\obj\Debug\Geometry.pdb

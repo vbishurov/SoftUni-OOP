@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-    class Program
+namespace Geometry
+{
+    class Geometry
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            
         }
     }
+}
