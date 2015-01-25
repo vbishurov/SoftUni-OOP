@@ -1,9 +1,9 @@
-﻿using System;
-using System.Text;
-
-namespace PCCatalog
+﻿namespace PCCatalog
 {
-    class Component
+    using System;
+    using System.Text;
+
+    internal class Component
     {
         private string name;
         private string details;
@@ -18,28 +18,38 @@ namespace PCCatalog
 
         public string Name
         {
-            get { return this.name; }
+            get
+            {
+                return this.name;
+            }
+
             set
             {
                 if (string.IsNullOrEmpty(value))
                 {
                     throw new ArgumentNullException("Component name cannot be empty.");
                 }
+
                 this.name = value;
             }
         }
 
         public string Details
         {
-            get { return this.details; }
+            get
+            {
+                return this.details;
+            }
+
             set
             {
                 if (value != null)
                 {
-                    if (value.Trim() == "")
+                    if (value.Trim() == string.Empty)
                     {
                         throw new ArgumentNullException("Details cannot be empty.");
                     }
+
                     if (value.Length > 100)
                     {
                         throw new ArgumentOutOfRangeException("Details cannot be more than 100 characters long.");
@@ -52,20 +62,25 @@ namespace PCCatalog
 
         public decimal Price
         {
-            get { return this.price; }
+            get
+            {
+                return this.price;
+            }
+
             set
             {
                 if (value < 0)
                 {
                     throw new ArgumentOutOfRangeException("Price cannot be negative");
                 }
+
                 this.price = value;
             }
         }
 
         public override string ToString()
         {
-            StringBuilder b= new StringBuilder();
+            StringBuilder b = new StringBuilder();
             b.AppendFormat("{0}: Price: {1:C}", this.Name.ToLower(), this.Price);
 
             if (this.Details != null)

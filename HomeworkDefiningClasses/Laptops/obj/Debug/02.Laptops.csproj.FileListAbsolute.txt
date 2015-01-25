@@ -1,0 +1,6 @@
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\Laptops\bin\Debug\Laptops.exe.config
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\Laptops\obj\Debug\Laptops.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\Laptops\obj\Debug\Laptops.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\Laptops\bin\Debug\Laptops.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\Laptops\bin\Debug\Laptops.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\Laptops\obj\Debug\02.Laptops.csprojResolveAssemblyReference.cache

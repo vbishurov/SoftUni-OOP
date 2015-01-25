@@ -1,9 +1,9 @@
-﻿using System;
-using System.Text;
-
-namespace Persons
+﻿namespace Persons
 {
-    class Person
+    using System;
+    using System.Text;
+
+    internal class Person
     {
         private string name;
         private byte age;
@@ -16,43 +16,61 @@ namespace Persons
             this.Email = email;
         }
 
-        public Person(string name, byte age) : this(name, age, null) { }
+        public Person(string name, byte age) 
+            : this(name, age, null)
+        {    
+        }
 
         public string Name
         {
-            get { return this.name; }
+            get
+            {
+                return this.name;
+            }
+
             private set
             {
                 if (string.IsNullOrEmpty(value))
                 {
                     throw new ArgumentNullException("Name cannot be empty");
                 }
+
                 this.name = value;
             }
         }
 
         public byte Age
         {
-            get { return this.age; }
+            get
+            {
+                return this.age;
+            }
+
             private set
             {
                 if (value > 100)
                 {
                     throw new ArgumentOutOfRangeException("Age must be between [0...100]");
                 }
+
                 this.age = value;
             }
         }
 
         public string Email
         {
-            get { return this.email; }
+            get
+            {
+                return this.email;
+            }
+
             private set
             {
                 if (!(value == null || value.Contains("@")))
                 {
                     throw new ArgumentException("Email can be null or must contain @");
                 }
+
                 this.email = value;
             }
         }
@@ -65,8 +83,8 @@ namespace Persons
             {
                 b.AppendFormat("My email is: {0}", this.Email);
             }
+
             return b.ToString();
         }
     }
-
 }

@@ -1,13 +1,13 @@
-﻿using System;
-using System.Text;
-
-namespace SoftUniLearningSystem
+﻿namespace SoftUniLearningSystem
 {
-    class CurrentStudent : Student
+    using System;
+    using System.Text;
+
+    internal abstract class CurrentStudent : Student
     {
         private string currentCourse;
 
-        public CurrentStudent(string firstName, string lastName, int studentNumber, float averageGrade, string currentCourse, byte age = 0)
+        protected CurrentStudent(string firstName, string lastName, int studentNumber, float averageGrade, string currentCourse, byte age = 0)
             : base(firstName, lastName, studentNumber, averageGrade, age)
         {
             this.CurrentCourse = currentCourse;
@@ -15,13 +15,18 @@ namespace SoftUniLearningSystem
 
         public string CurrentCourse
         {
-            get { return this.currentCourse; }
+            get
+            {
+                return this.currentCourse;
+            }
+
             set
             {
-                if (string.IsNullOrEmpty(value) || value.Trim() == "")
+                if (string.IsNullOrEmpty(value) || value.Trim() == string.Empty)
                 {
                     throw new ArgumentNullException("Current course cannot be empty.");
                 }
+
                 this.currentCourse = value;
             }
         }

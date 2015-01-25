@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace PCCatalog
+﻿namespace PCCatalog
 {
-    class PCCatalog
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    public class PCCatalog
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Component graphicsRadeon = new Component("Radeon", 549.67m, "bullshit");
             Component graphicsGeForce = new Component("GeForce", 612.95m, "Very nice graphics card");
@@ -14,7 +14,7 @@ namespace PCCatalog
             Component procIntel = new Component("Intel", 442.54m, "Awesome");
             Component procAMD = new Component("AMD", 395.427m, "almost there");
 
-            Computer compAMD = new Computer("AMD", new List<Component>() {  graphicsRadeon, procAMD });
+            Computer compAMD = new Computer("AMD", new List<Component>() { graphicsRadeon, procAMD });
             Computer compIntel = new Computer("Intel");
             compIntel.Components.Add(procIntel);
             compIntel.Components.Add(graphicsGeForce);

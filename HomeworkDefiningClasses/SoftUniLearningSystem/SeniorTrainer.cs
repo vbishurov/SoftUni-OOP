@@ -1,13 +1,12 @@
-﻿using System;
-
-namespace SoftUniLearningSystem
+﻿namespace SoftUniLearningSystem
 {
-    class SeniorTrainer : Trainer
+    using System;
+
+    internal class SeniorTrainer : Trainer
     {
         public SeniorTrainer(string firstName, string lastName, byte age = 0)
             : base(firstName, lastName, age)
         {
-
         }
 
         public void DeleteCourse(string courseName)

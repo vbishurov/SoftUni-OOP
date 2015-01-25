@@ -1,20 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace SoftUniLearningSystem
+﻿namespace SoftUniLearningSystem
 {
-    class SULSTest
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    internal class SULSTest
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            JuniorTrainer kolev = new JuniorTrainer("Filip", "Kolev", 28);
+            Trainer kolev = new JuniorTrainer("Filip", "Kolev", 28);
             SeniorTrainer nakov = new SeniorTrainer("Svetlin", "Nakov");
 
+            Student zavarshil = new GraduateStudent("Zavarshil", "Student", 38678, 5.98f, 23);
+            CurrentStudent ivan = new OnsiteStudent("Ivan", "Ivanov", 58945, 5.46f, "OOP", 4, 22);
+            CurrentStudent todor = new OnlineStudent("Todor", "Georgiev", 75234, 3.66f, "C# Basics", 20);
             DropoutStudent pesho = new DropoutStudent("Pesho", "Peshev", 46786, 2.54f, "low grades", 45);
-            GraduateStudent zavarshil = new GraduateStudent("Zavarshil", "Student", 38678, 5.98f, 23);
-            OnsiteStudent ivan = new OnsiteStudent("Ivan", "Ivanov", 58945, 5.46f, "OOP", 4, 22);
-            OnlineStudent todor = new OnlineStudent("Todor", "Georgiev", 75234, 3.66f, "C# Basics", 20);
 
             pesho.Reapply();
             Console.WriteLine();

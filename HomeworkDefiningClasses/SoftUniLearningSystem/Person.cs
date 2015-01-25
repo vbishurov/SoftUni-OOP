@@ -1,21 +1,21 @@
-﻿using System;
-using System.Text;
-
-namespace SoftUniLearningSystem
+﻿namespace SoftUniLearningSystem
 {
-    class Person
+    using System;
+    using System.Text;
+
+    public abstract class Person
     {
         private string firstName;
         private string lastName;
         private byte age;
 
-        public Person(string firstName, string lastName)
+        protected Person(string firstName, string lastName)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
         }
 
-        public Person(string firstName, string lastName, byte age)
+        protected Person(string firstName, string lastName, byte age)
             : this(firstName, lastName)
         {
             this.Age = age;
@@ -23,39 +23,54 @@ namespace SoftUniLearningSystem
 
         public string FirstName
         {
-            get { return this.firstName; }
+            get
+            {
+                return this.firstName;
+            }
+
             set
             {
-                if (string.IsNullOrEmpty(value) || value.Trim() == "")
+                if (string.IsNullOrEmpty(value) || value.Trim() == string.Empty)
                 {
                     throw new ArgumentNullException("First name cannot be empty.");
                 }
+
                 this.firstName = value;
             }
         }
 
         public string LastName
         {
-            get { return this.lastName; }
+            get
+            {
+                return this.lastName;
+            }
+
             set
             {
-                if (string.IsNullOrEmpty(value) || value.Trim() == "")
+                if (string.IsNullOrEmpty(value) || value.Trim() == string.Empty)
                 {
                     throw new ArgumentNullException("Last name cannot be empty.");
                 }
+
                 this.lastName = value;
             }
         }
 
         public byte Age
         {
-            get { return this.age; }
+            get
+            {
+                return this.age;
+            }
+
             private set
             {
                 if (value > 100)
                 {
                     throw new ArgumentOutOfRangeException("Age must be between [0...100]");
                 }
+
                 this.age = value;
             }
         }
@@ -69,6 +84,7 @@ namespace SoftUniLearningSystem
                 b.AppendLine();
                 b.Append("Age: " + this.Age);
             }
+
             return b.ToString();
         }
     }

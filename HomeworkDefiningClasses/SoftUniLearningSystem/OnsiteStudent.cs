@@ -1,9 +1,9 @@
-﻿using System;
-using System.Text;
-
-namespace SoftUniLearningSystem
+﻿namespace SoftUniLearningSystem
 {
-    class OnsiteStudent : CurrentStudent
+    using System;
+    using System.Text;
+
+    internal class OnsiteStudent : CurrentStudent
     {
         private int numberOfVisits;
 
@@ -15,13 +15,18 @@ namespace SoftUniLearningSystem
 
         public int NumberOfVisits
         {
-            get { return this.numberOfVisits; }
+            get
+            {
+                return this.numberOfVisits;
+            }
+
             set
             {
                 if (value < 0)
                 {
                     throw new ArgumentOutOfRangeException("Number of visits cannot be empty.");
                 }
+
                 this.numberOfVisits = value;
             }
         }

@@ -1,9 +1,9 @@
-﻿using System;
-using System.Text;
-
-namespace Laptops
+﻿namespace Laptops
 {
-    class Battery
+    using System;
+    using System.Text;
+
+    internal class Battery
     {
         private string type;
         private float life;
@@ -21,26 +21,36 @@ namespace Laptops
 
         public string Type
         {
-            get { return this.type; }
+            get
+            {
+                return this.type;
+            }
+
             set
             {
                 if (value != null && value.Length < 1)
                 {
                     throw new ArgumentException("Battery type cannot be empty.");
                 }
+
                 this.type = value;
             }
         }
 
         public float Life
         {
-            get { return this.life; }
+            get
+            {
+                return this.life;
+            }
+
             set
             {
                 if (value < 0)
                 {
                     throw new ArgumentOutOfRangeException("Battery life cannot be negative.");
                 }
+
                 this.life = value;
             }
         }
@@ -52,11 +62,13 @@ namespace Laptops
             {
                 b.AppendFormat("Battery: {0}", this.Type);
             }
+
             if (this.Life > 0)
             {
                 b.AppendLine();
                 b.AppendFormat("Battery Life: {0} hours", this.Life);
             }
+
             return b.ToString();
         }
     }

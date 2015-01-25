@@ -1,0 +1,6 @@
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\SoftUniLearningSystem\bin\Debug\SoftUniLearningSystem.exe.config
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\SoftUniLearningSystem\obj\Debug\SoftUniLearningSystem.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\SoftUniLearningSystem\obj\Debug\SoftUniLearningSystem.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\SoftUniLearningSystem\obj\Debug\04.SoftUniLearningSystem.csprojResolveAssemblyReference.cache
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\SoftUniLearningSystem\bin\Debug\SoftUniLearningSystem.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\SoftUniLearningSystem\bin\Debug\SoftUniLearningSystem.pdb

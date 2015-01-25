@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace PCCatalog
+﻿namespace PCCatalog
 {
-    class Computer
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+
+    internal class Computer
     {
         private string name;
         private IList<Component> components;
@@ -24,26 +24,36 @@ namespace PCCatalog
 
         public string Name
         {
-            get { return this.name; }
+            get
+            {
+                return this.name;
+            }
+
             set
             {
                 if (string.IsNullOrEmpty(value))
                 {
                     throw new ArgumentNullException("Name cannot be empty.");
                 }
+
                 this.name = value;
             }
         }
 
         public IList<Component> Components
         {
-            get { return this.components; }
+            get
+            {
+                return this.components;
+            }
+
             set
             {
                 if (value == null)
                 {
                     throw new ArgumentNullException("Computer components cannot be empty.");
                 }
+
                 this.components = value;
             }
         }
@@ -63,11 +73,12 @@ namespace PCCatalog
             if (this.components != null)
             {
                 b.AppendLine();
-                foreach (Component component in components)
+                foreach (Component component in this.components)
                 {
                     b.AppendLine(component.ToString());
                 }
             }
+
             return b.ToString();
         }
     }

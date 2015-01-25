@@ -1,9 +1,9 @@
-﻿using System;
-using System.Text;
-
-namespace SoftUniLearningSystem
+﻿namespace SoftUniLearningSystem
 {
-    class DropoutStudent : Student
+    using System;
+    using System.Text;
+
+    internal class DropoutStudent : Student
     {
         private string dropoutReason;
 
@@ -15,13 +15,18 @@ namespace SoftUniLearningSystem
 
         public string DropoutReason
         {
-            get { return this.dropoutReason; }
+            get
+            {
+                return this.dropoutReason;
+            }
+
             set
             {
-                if (string.IsNullOrEmpty(value) || value.Trim() == "")
+                if (string.IsNullOrEmpty(value) || value.Trim() == string.Empty)
                 {
                     throw new ArgumentNullException("Dropout reason cannot be empty.");
                 }
+
                 this.dropoutReason = value;
             }
         }
