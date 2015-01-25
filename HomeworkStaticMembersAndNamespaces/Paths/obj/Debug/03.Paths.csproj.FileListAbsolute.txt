@@ -8,3 +8,13 @@ D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\Paths\bin\Debug
 D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\Paths\obj\Debug\03.Paths.csprojResolveAssemblyReference.cache
 D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\Paths\obj\Debug\Paths.exe
 D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\Paths\obj\Debug\Paths.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\Paths\bin\Debug\Paths.exe.config
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\Paths\obj\Debug\Paths.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\Paths\obj\Debug\Paths.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\Paths\bin\Debug\Paths.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\Paths\bin\Debug\Paths.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\Paths\bin\Debug\DistanceCalculator.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\Paths\bin\Debug\Point3D.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\Paths\bin\Debug\DistanceCalculator.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\Paths\bin\Debug\Point3D.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\Paths\obj\Debug\03.Paths.csprojResolveAssemblyReference.cache

@@ -1,8 +1,8 @@
-﻿using System.Text;
-
-namespace HTMLDispatcher
+﻿namespace HTMLDispatcher
 {
-    static class HTMLDispatcher
+    using System.Text;
+
+    internal static class HTMLDispatcher
     {
         public static string CreateImage(string source, string alt, string title)
         {

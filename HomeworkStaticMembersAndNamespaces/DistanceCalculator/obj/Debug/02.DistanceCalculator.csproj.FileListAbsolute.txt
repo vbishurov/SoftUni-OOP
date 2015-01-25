@@ -6,3 +6,11 @@ D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\DistanceCalcula
 D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\DistanceCalculator\obj\Debug\02.DistanceCalculator.csprojResolveAssemblyReference.cache
 D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\DistanceCalculator\obj\Debug\DistanceCalculator.exe
 D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\DistanceCalculator\obj\Debug\DistanceCalculator.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\DistanceCalculator\bin\Debug\DistanceCalculator.exe.config
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\DistanceCalculator\obj\Debug\DistanceCalculator.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\DistanceCalculator\obj\Debug\DistanceCalculator.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\DistanceCalculator\bin\Debug\DistanceCalculator.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\DistanceCalculator\bin\Debug\DistanceCalculator.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\DistanceCalculator\bin\Debug\Point3D.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\DistanceCalculator\bin\Debug\Point3D.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\DistanceCalculator\obj\Debug\02.DistanceCalculator.csprojResolveAssemblyReference.cache

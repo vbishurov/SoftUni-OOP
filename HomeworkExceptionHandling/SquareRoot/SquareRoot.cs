@@ -1,10 +1,10 @@
-﻿using System;
-
-namespace SquareRoot
+﻿namespace SquareRoot
 {
-    class SquareRoot
+    using System;
+
+    public class SquareRoot
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             try
             {
@@ -13,6 +13,7 @@ namespace SquareRoot
                 {
                     throw new ArgumentOutOfRangeException("Square root for negative numbers is undefined.");
                 }
+
                 Console.WriteLine("Square root from: {0} is {1}", number, Math.Sqrt(number));
             }
             catch (ArgumentOutOfRangeException)

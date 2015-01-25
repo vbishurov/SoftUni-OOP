@@ -1,10 +1,10 @@
-﻿using System;
-
-namespace BitArray
+﻿namespace BitArray
 {
-    class BitArrayTest
+    using System;
+
+    public class BitArrayTest
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             BitArray largeNumber = new BitArray(1337);
 
@@ -12,6 +12,7 @@ namespace BitArray
             {
                 largeNumber[i] = 1;
             }
+
             Console.WriteLine(largeNumber);
 
             BitArray notSoLargeNumber = new BitArray(20);

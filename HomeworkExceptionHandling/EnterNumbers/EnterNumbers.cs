@@ -1,10 +1,10 @@
-﻿using System;
-
-namespace EnterNumbers
+﻿namespace EnterNumbers
 {
-    class EnterNumbers
+    using System;
+
+    public class EnterNumbers
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             int start = 1;
             int end = 100;
@@ -12,7 +12,7 @@ namespace EnterNumbers
 
             for (int i = 0; i < 100; i++)
             {
-                start = ReadNumber(start, (end - counter));
+                start = ReadNumber(start, end - counter + 1);
                 counter--;
                 if (counter == 0)
                 {
@@ -41,7 +41,6 @@ namespace EnterNumbers
             catch (FormatException)
             {
                 Console.Error.WriteLine("Invalid Number!");
-                throw;
             }
 
             return number;

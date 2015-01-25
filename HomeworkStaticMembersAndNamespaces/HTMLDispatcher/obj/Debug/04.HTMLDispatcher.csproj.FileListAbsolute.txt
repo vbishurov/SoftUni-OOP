@@ -4,3 +4,9 @@ D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\HTMLDispatcher\
 D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\HTMLDispatcher\obj\Debug\04.HTMLDispatcher.csprojResolveAssemblyReference.cache
 D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\HTMLDispatcher\obj\Debug\HTMLDispatcher.exe
 D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\HTMLDispatcher\obj\Debug\HTMLDispatcher.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\HTMLDispatcher\bin\Debug\HTMLDispatcher.exe.config
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\HTMLDispatcher\obj\Debug\HTMLDispatcher.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\HTMLDispatcher\obj\Debug\HTMLDispatcher.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\HTMLDispatcher\bin\Debug\HTMLDispatcher.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\HTMLDispatcher\bin\Debug\HTMLDispatcher.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkStaticMembersAndNamespaces\HTMLDispatcher\obj\Debug\04.HTMLDispatcher.csprojResolveAssemblyReference.cache

@@ -1,11 +1,11 @@
-﻿using System;
-using System.IO;
-using System.Text;
-using Space3D;
-
-namespace Paths
+﻿namespace Paths
 {
-    static class Storage
+    using System;
+    using System.IO;
+    using System.Text;
+    using Space3D;
+
+    internal static class Storage
     {
         public static Paths3D LoadPaths(string file)
         {
@@ -24,6 +24,7 @@ namespace Paths
                         line = reader.ReadLine();
                     }
                 }
+
                 return paths;
             }
             catch (Exception e)
@@ -43,6 +44,7 @@ namespace Paths
                     {
                         writer.WriteLine(point3D);
                     }
+
                     string action = append == true ? "appended to" : "overwritten";
                     Console.WriteLine("File {0} successfully", action);
                 }

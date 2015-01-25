@@ -1,12 +1,12 @@
-﻿using System;
-using System.Globalization;
-using System.Threading;
-
-namespace Space3D
+﻿namespace Space3D
 {
-    class TestPoint
+    using System;
+    using System.Globalization;
+    using System.Threading;
+
+    public class TestPoint
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
             Point3D point = new Point3D(4, 6.32645623623642, 7.239864527364287);

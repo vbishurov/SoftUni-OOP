@@ -1,19 +1,14 @@
-﻿using System;
-using System.Text.RegularExpressions;
-
-namespace Space3D
+﻿namespace Space3D
 {
+    using System.Text.RegularExpressions;
+
     public class Point3D
     {
-        private double x;
-        private double y;
-        private double z;
-
-        private static readonly Point3D startingPoint;
+        private static readonly Point3D StartPoint;
 
         static Point3D()
         {
-            startingPoint = new Point3D(0, 0, 0);
+            StartPoint = new Point3D(0, 0, 0);
         }
 
         public Point3D(double x, double y, double z)
@@ -23,19 +18,19 @@ namespace Space3D
             this.Z = z;
         }
 
+        public static Point3D StartingPoint
+        {
+            get
+            {
+                return Point3D.StartPoint;
+            }
+        }
+
         public double X { get; set; }
 
         public double Y { get; set; }
 
         public double Z { get; set; }
-
-        public static Point3D StartingPoint
-        {
-            get
-            {
-                return Point3D.startingPoint;
-            }
-        }
 
         public static double[] ExtractPoint(string line)
         {
@@ -50,7 +45,7 @@ namespace Space3D
 
         public override string ToString()
         {
-            return String.Format("{{ {0:0.##}, {1:0.##}, {2:0.##} }}", this.X, this.Y, this.Z);
+            return string.Format("{{ {0:0.##}, {1:0.##}, {2:0.##} }}", this.X, this.Y, this.Z);
         }
     }
 }

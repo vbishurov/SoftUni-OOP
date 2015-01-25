@@ -1,10 +1,10 @@
-﻿using System;
-using System.Numerics;
-using System.Text;
-
-namespace BitArray
+﻿namespace BitArray
 {
-    class BitArray
+    using System;
+    using System.Numerics;
+    using System.Text;
+
+    internal class BitArray
     {
         private int length;
         private BigInteger bitValues;
@@ -16,13 +16,18 @@ namespace BitArray
 
         public int Length
         {
-            get { return this.length; }
+            get
+            {
+                return this.length;
+            }
+
             private set
             {
                 if (value < 1 || value > 100000)
                 {
                     throw new ArgumentOutOfRangeException("Bir array length must be in range [1...100 000]");
                 }
+
                 this.length = value;
             }
         }
@@ -33,24 +38,27 @@ namespace BitArray
             {
                 if (index < 0 || index > this.Length)
                 {
-                    throw new IndexOutOfRangeException(String.Format("Index {0} is invalid. Enter index in range[0...{1}].", index, this.Length));
+                    throw new IndexOutOfRangeException(string.Format("Index {0} is invalid. Enter index in range[0...{1}].", index, this.Length));
                 }
-                return (bitValues & (1 << index)) == 0 ? 0 : 1;
+
+                return (this.bitValues & (1 << index)) == 0 ? 0 : 1;
             }
+
             set
             {
                 if (index < 0 || index > this.Length)
                 {
-                    throw new IndexOutOfRangeException(String.Format("Index {0} is invalid. Enter index in range[0...{1}].", index, this.Length));
+                    throw new IndexOutOfRangeException(string.Format("Index {0} is invalid. Enter index in range[0...{1}].", index, this.Length));
                 }
+
                 if (value < 0 || value > 1)
                 {
-                    throw new ArgumentException(String.Format("Value {0} is invalid. Valid values are 0 and 1."));
+                    throw new ArgumentException(string.Format("Value {0} is invalid. Valid values are 0 and 1."));
                 }
 
-                bitValues &= ~((BigInteger)1 << index);
+                this.bitValues &= ~((BigInteger)1 << index);
 
-                bitValues |= ((BigInteger)value << index);
+                this.bitValues |= (BigInteger)value << index;
             }
         }
 
@@ -61,6 +69,7 @@ namespace BitArray
             {
                 b.Append(this[i]);
             }
+
             return b.ToString();
         }
 

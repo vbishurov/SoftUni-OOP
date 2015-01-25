@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using Space3D;
-using System.Threading;
-
-namespace Paths
+﻿namespace Paths
 {
-    class PathsTest
+    using System;
+    using System.Collections.Generic;
+    using System.Globalization;
+    using System.Threading;
+    using Space3D;
+
+    public class PathsTest
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
@@ -23,10 +23,9 @@ namespace Paths
 
             List<Point3D> points = new List<Point3D>() { a, b, c, d, e, f, g, h };
 
-            Paths3D paths = new Paths3D(a, b, c, d, e, f, g, h); //Constructor from params
-            //Paths3D paths = new Paths3D(points); //Constructor from list
-
-
+            // Paths3D paths = new Paths3D(points); // Constructor from list
+            Paths3D paths = new Paths3D(a, b, c, d, e, f, g, h); // Constructor from params
+            
             Console.WriteLine(paths.ToString());
 
             paths[4] = new Point3D(7, 7, 8);
@@ -39,8 +38,8 @@ namespace Paths
             Paths3D testStorage = Storage.LoadPaths("../../input.txt");
             Console.WriteLine(testStorage);
 
-            Storage.SavePaths(paths, "../../output.txt"); //Overwriting
-            //Storage.SavePaths(paths, "../../output.txt", true); //Appending
+            // Storage.SavePaths(paths, "../../output.txt", true); // Appending
+            Storage.SavePaths(paths, "../../output.txt"); // Overwriting
 
             Console.WriteLine();
             testStorage = Storage.LoadPaths("../../output.txt");
