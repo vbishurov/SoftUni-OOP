@@ -1,0 +1,6 @@
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\HumanStudentWorker\bin\Debug\HumanStudentWorker.exe.config
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\HumanStudentWorker\bin\Debug\HumanStudentWorker.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\HumanStudentWorker\bin\Debug\HumanStudentWorker.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\HumanStudentWorker\obj\Debug\02.HumanStudentWorker.csprojResolveAssemblyReference.cache
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\HumanStudentWorker\obj\Debug\HumanStudentWorker.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\HumanStudentWorker\obj\Debug\HumanStudentWorker.pdb

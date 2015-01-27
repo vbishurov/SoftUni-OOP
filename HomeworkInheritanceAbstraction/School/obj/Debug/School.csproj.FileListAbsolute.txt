@@ -1,0 +1,6 @@
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\School\bin\Debug\School.exe.config
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\School\obj\Debug\School.csprojResolveAssemblyReference.cache
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\School\bin\Debug\School.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\School\bin\Debug\School.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\School\obj\Debug\School.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\School\obj\Debug\School.pdb
