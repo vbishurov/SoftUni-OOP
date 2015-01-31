@@ -1,7 +1,8 @@
-﻿namespace CompanyHierarchy
+﻿namespace CompanyHierarchy.People
 {
     using System;
     using System.Text;
+    using Interfaces;
 
     internal class Custumer : Person, ICustumer
     {

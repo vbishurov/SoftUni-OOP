@@ -1,9 +1,10 @@
-﻿namespace CompanyHierarchy
+﻿namespace CompanyHierarchy.Models
 {
     using System;
     using System.Text;
+    using global::CompanyHierarchy.Interfaces;
 
-    internal class Project : IProject
+    public class Project : IProject
     {
         private string projectName;
         private string details;

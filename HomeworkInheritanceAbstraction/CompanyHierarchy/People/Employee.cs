@@ -1,10 +1,11 @@
-﻿namespace CompanyHierarchy
+﻿namespace CompanyHierarchy.People
 {
     using System;
     using System.Linq;
     using System.Text;
+    using Interfaces;
 
-    internal abstract class Employee : Person, IEmployee
+    public abstract class Employee : Person, IEmployee
     {
         private static readonly string[] Departments = { "production", "accounting", "sales", "marketing" };
 

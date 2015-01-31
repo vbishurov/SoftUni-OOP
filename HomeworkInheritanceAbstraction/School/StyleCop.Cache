@@ -88,7 +88,7 @@
   <sourcecode name="Class.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2014.04.01 11:18:24.000</styleCop>
-      <settingsFile>2015.01.26 18:19:39.801</settingsFile>
+      <settingsFile>2015.01.31 16:04:53.647</settingsFile>
       <sourceFile>2015.01.26 19:00:30.979</sourceFile>
       <parser>2014.04.01 11:18:24.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014.04.01 11:18:24.000</StyleCop.CSharp.DocumentationRules>
@@ -111,7 +111,7 @@
   <sourcecode name="Discipline.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2014.04.01 11:18:24.000</styleCop>
-      <settingsFile>2015.01.26 18:19:39.801</settingsFile>
+      <settingsFile>2015.01.31 16:04:53.647</settingsFile>
       <sourceFile>2015.01.26 18:52:41.559</sourceFile>
       <parser>2014.04.01 11:18:24.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014.04.01 11:18:24.000</StyleCop.CSharp.DocumentationRules>
@@ -134,7 +134,7 @@
   <sourcecode name="IDetailable.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2014.04.01 11:18:24.000</styleCop>
-      <settingsFile>2015.01.26 18:19:39.801</settingsFile>
+      <settingsFile>2015.01.31 16:04:53.647</settingsFile>
       <sourceFile>2015.01.26 09:29:25.954</sourceFile>
       <parser>2014.04.01 11:18:24.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014.04.01 11:18:24.000</StyleCop.CSharp.DocumentationRules>
@@ -157,7 +157,7 @@
   <sourcecode name="Person.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2014.04.01 11:18:24.000</styleCop>
-      <settingsFile>2015.01.26 18:19:39.801</settingsFile>
+      <settingsFile>2015.01.31 16:04:53.647</settingsFile>
       <sourceFile>2015.01.26 18:39:15.978</sourceFile>
       <parser>2014.04.01 11:18:24.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014.04.01 11:18:24.000</StyleCop.CSharp.DocumentationRules>
@@ -180,7 +180,7 @@
   <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2014.04.01 11:18:24.000</styleCop>
-      <settingsFile>2015.01.26 18:19:39.801</settingsFile>
+      <settingsFile>2015.01.31 16:04:53.647</settingsFile>
       <sourceFile>2015.01.26 09:07:16.220</sourceFile>
       <parser>2014.04.01 11:18:24.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014.04.01 11:18:24.000</StyleCop.CSharp.DocumentationRules>
@@ -203,7 +203,7 @@
   <sourcecode name="SchoolTest.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2014.04.01 11:18:24.000</styleCop>
-      <settingsFile>2015.01.26 18:19:39.801</settingsFile>
+      <settingsFile>2015.01.31 16:04:53.647</settingsFile>
       <sourceFile>2015.01.26 18:55:20.342</sourceFile>
       <parser>2014.04.01 11:18:24.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014.04.01 11:18:24.000</StyleCop.CSharp.DocumentationRules>
@@ -232,17 +232,12 @@
         <line>18</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
-        <context>The variable name 'cSharp' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
-        <line>22</line>
-        <warning>False</warning>
-      </violation>
     </violations>
   </sourcecode>
   <sourcecode name="Student.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2014.04.01 11:18:24.000</styleCop>
-      <settingsFile>2015.01.26 18:19:39.801</settingsFile>
+      <settingsFile>2015.01.31 16:04:53.647</settingsFile>
       <sourceFile>2015.01.26 18:41:27.164</sourceFile>
       <parser>2014.04.01 11:18:24.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014.04.01 11:18:24.000</StyleCop.CSharp.DocumentationRules>
@@ -265,7 +260,7 @@
   <sourcecode name="Teacher.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2014.04.01 11:18:24.000</styleCop>
-      <settingsFile>2015.01.26 18:19:39.801</settingsFile>
+      <settingsFile>2015.01.31 16:04:53.647</settingsFile>
       <sourceFile>2015.01.26 18:52:41.567</sourceFile>
       <parser>2014.04.01 11:18:24.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014.04.01 11:18:24.000</StyleCop.CSharp.DocumentationRules>

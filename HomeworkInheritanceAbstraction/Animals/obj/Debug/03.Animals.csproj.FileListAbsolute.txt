@@ -1,0 +1,3 @@
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\Animals\bin\Debug\Animals.exe.config
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\Animals\obj\Debug\Animals.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\Animals\obj\Debug\Animals.pdb

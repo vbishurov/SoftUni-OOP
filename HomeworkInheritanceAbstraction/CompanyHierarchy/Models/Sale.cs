@@ -1,9 +1,10 @@
-﻿namespace CompanyHierarchy
+﻿namespace CompanyHierarchy.Models
 {
     using System;
     using System.Text;
+    using global::CompanyHierarchy.Interfaces;
 
-    internal class Sale : ISale
+    public class Sale : ISale
     {
         private string productName;
         private decimal price;

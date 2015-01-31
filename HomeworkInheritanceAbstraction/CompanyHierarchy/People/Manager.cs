@@ -1,9 +1,10 @@
-﻿namespace CompanyHierarchy
+﻿namespace CompanyHierarchy.People
 {
     using System.Collections.Generic;
     using System.Text;
+    using Interfaces;
 
-    internal class Manager : Employee, IManager
+    public class Manager : Employee, IManager
     {
         public Manager(string firstName, string lastName, string id, decimal salary, string department, List<Employee> employees)
             : base(firstName, lastName, id, salary, department)

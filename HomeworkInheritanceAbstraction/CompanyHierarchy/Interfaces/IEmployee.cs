@@ -1,6 +1,6 @@
-﻿namespace CompanyHierarchy
+﻿namespace CompanyHierarchy.Interfaces
 {
-    internal interface IEmployee
+    public interface IEmployee : IPerson
     {
         string Department { get; set; }
 

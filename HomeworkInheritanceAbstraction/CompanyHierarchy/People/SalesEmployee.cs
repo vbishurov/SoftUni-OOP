@@ -1,9 +1,11 @@
-﻿namespace CompanyHierarchy
+﻿namespace CompanyHierarchy.People
 {
     using System.Collections.Generic;
     using System.Text;
+    using Interfaces;
+    using Models;
 
-    internal class SalesEmployee : RegularEmployee, ISalesEmployee
+    public class SalesEmployee : RegularEmployee, ISalesEmployee
     {
         public SalesEmployee(string firstName, string lastName, string id, decimal salary, string department, List<Sale> sales)
             : base(firstName, lastName, id, salary, department)

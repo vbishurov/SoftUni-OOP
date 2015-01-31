@@ -1,4 +1,4 @@
-﻿namespace CompanyHierarchy
+﻿namespace CompanyHierarchy.Interfaces
 {
     using System;
 

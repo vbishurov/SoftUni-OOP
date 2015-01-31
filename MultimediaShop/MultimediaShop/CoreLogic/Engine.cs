@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Globalization;
+using System.Linq;
 using MultimediaShop.Models;
 
 namespace MultimediaShop.CoreLogic
@@ -9,23 +10,23 @@ namespace MultimediaShop.CoreLogic
 
     internal class Engine
     {
-        private Dictionary<IItem, int> itemSupplies = new Dictionary<IItem, int>();
+        private readonly Dictionary<IItem, int> itemSupplies = new Dictionary<IItem, int>();
 
         public void Run()
         {
             while (true)
             {
                 string command = Console.ReadLine();
-                string[] commandSpitted = command.Split(' ');
-                switch (commandSpitted[0])
+                string[] commandSplitted = command.Split(new char[] { ' ' }, 4);
+                switch (commandSplitted[0])
                 {
-                    case "supply": Supply(commandSpitted[1], commandSpitted[2], commandSpitted[3]);
+                    case "supply": Supply(commandSplitted[1], commandSplitted[2], commandSplitted[3]);
                         break;
-                    case "sell": Sell(commandSpitted[1]);
+                    case "sell": Sell(commandSplitted[1]);
                         break;
-                    case "rent": Rent(commandSpitted[1], commandSpitted[2], commandSpitted[3]);
+                    case "rent": Rent(commandSplitted[1], commandSplitted[2], commandSplitted[3]);
                         break;
-                    case "return": Return(commandSpitted[1]);
+                    case "return": Return(commandSplitted[1]);
                         break;
                 }
             }
@@ -40,7 +41,8 @@ namespace MultimediaShop.CoreLogic
                     break;
                 case "game": SupplyGames(int.Parse(quantity), keyValuePairs);
                     break;
-                case "movie": SupplyMovies(int.Parse(quantity), keyValuePairs);
+                case "movie":
+                case "video": SupplyMovies(int.Parse(quantity), keyValuePairs);
                     break;
             }
         }
@@ -73,51 +75,45 @@ namespace MultimediaShop.CoreLogic
 
         private void SupplyMovies(int quantity, Dictionary<string, string> keyValuePairs)
         {
-            string id;
-            string title;
-            string price;
-            string length;
-            string genre;
-            keyValuePairs.TryGetValue("id", out id);
-            keyValuePairs.TryGetValue("title", out title);
-            keyValuePairs.TryGetValue("price", out price);
-            keyValuePairs.TryGetValue("length", out length);
-            keyValuePairs.TryGetValue("genre", out genre);
+            string id = keyValuePairs["id"];
+            string title = keyValuePairs["title"];
+            decimal price = decimal.Parse(keyValuePairs["price"], NumberFormatInfo.InvariantInfo);
+            double length = double.Parse(keyValuePairs["length"], NumberFormatInfo.InvariantInfo);
+            string genre = keyValuePairs["genre"];
             this.itemSupplies.Add(
-                new Movie(id, title, decimal.Parse(price), double.Parse(length), genre),
-                quantity);
+                new Movie(id, title, price, length, genre), quantity);
         }
 
         private void SupplyGames(int quantity, Dictionary<string, string> keyValuePairs)
         {
-            string id;
-            string title;
-            string price;
-            string genre;
-            keyValuePairs.TryGetValue("id", out id);
-            keyValuePairs.TryGetValue("title", out title);
-            keyValuePairs.TryGetValue("price", out price);
-            keyValuePairs.TryGetValue("genre", out genre);
+            string id = keyValuePairs["id"];
+            string title = keyValuePairs["title"];
+            decimal price = decimal.Parse(keyValuePairs["price"], NumberFormatInfo.InvariantInfo);
+            string genre = keyValuePairs["genre"];
+            string ageRestrictionString = keyValuePairs["ageRestriction"];
+            AgeRestriction ageRestriction = AgeRestriction.Minor;
+            switch (ageRestrictionString)
+            {
+                case "minor": ageRestriction = AgeRestriction.Minor;
+                    break;
+                case "teen": ageRestriction = AgeRestriction.Teen;
+                    break;
+                case "adult": ageRestriction = AgeRestriction.Adult;
+                    break;
+            }
             this.itemSupplies.Add(
-                new Game(id, title, decimal.Parse(price), genre),
-                quantity);
+                new Game(id, title, price, genre, ageRestriction), quantity);
         }
 
         private void SupplyBooks(int quantity, Dictionary<string, string> keyValuePairs)
         {
-            string id;
-            string title;
-            string price;
-            string author;
-            string genre;
-            keyValuePairs.TryGetValue("id", out id);
-            keyValuePairs.TryGetValue("title", out title);
-            keyValuePairs.TryGetValue("price", out price);
-            keyValuePairs.TryGetValue("author", out author);
-            keyValuePairs.TryGetValue("genre", out genre);
+            string id = keyValuePairs["id"];
+            string title = keyValuePairs["title"];
+            decimal price = decimal.Parse(keyValuePairs["price"], NumberFormatInfo.InvariantInfo);
+            string author = keyValuePairs["author"];
+            string genre = keyValuePairs["genre"];
             this.itemSupplies.Add(
-                new Book(id, title, decimal.Parse(price), author, genre),
-                quantity);
+                new Book(id, title, price, author, genre), quantity);
         }
 
         private Dictionary<string, string> ExtractKeyValuePairs(string query)

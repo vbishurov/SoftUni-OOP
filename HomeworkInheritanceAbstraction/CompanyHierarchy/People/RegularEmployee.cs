@@ -1,6 +1,6 @@
-﻿namespace CompanyHierarchy
+﻿namespace CompanyHierarchy.People
 {
-    internal abstract class RegularEmployee : Employee
+    public abstract class RegularEmployee : Employee
     {
         protected RegularEmployee(string firstName, string lastName, string id, decimal salary, string department)
             : base(firstName, lastName, id, salary, department)

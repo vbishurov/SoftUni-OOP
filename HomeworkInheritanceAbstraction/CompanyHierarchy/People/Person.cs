@@ -1,9 +1,10 @@
-﻿namespace CompanyHierarchy
+﻿namespace CompanyHierarchy.People
 {
     using System;
     using System.Text;
+    using Interfaces;
 
-    internal abstract class Person : IPerson
+    public abstract class Person : IPerson
     {
         private string firstName;
         private string lastName;
