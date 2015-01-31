@@ -1,0 +1,5 @@
+D:\My Documents\workspace\SoftUni-OOP\MultimediaShop\Test\bin\Debug\Test.exe.config
+D:\My Documents\workspace\SoftUni-OOP\MultimediaShop\Test\bin\Debug\Test.exe
+D:\My Documents\workspace\SoftUni-OOP\MultimediaShop\Test\bin\Debug\Test.pdb
+D:\My Documents\workspace\SoftUni-OOP\MultimediaShop\Test\obj\Debug\Test.exe
+D:\My Documents\workspace\SoftUni-OOP\MultimediaShop\Test\obj\Debug\Test.pdb

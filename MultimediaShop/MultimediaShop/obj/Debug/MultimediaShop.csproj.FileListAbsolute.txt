@@ -1,0 +1,6 @@
+D:\My Documents\workspace\SoftUni-OOP\MultimediaShop\MultimediaShop\bin\Debug\LabMultimediaSystem.exe.config
+D:\My Documents\workspace\SoftUni-OOP\MultimediaShop\MultimediaShop\bin\Debug\LabMultimediaSystem.exe
+D:\My Documents\workspace\SoftUni-OOP\MultimediaShop\MultimediaShop\bin\Debug\LabMultimediaSystem.pdb
+D:\My Documents\workspace\SoftUni-OOP\MultimediaShop\MultimediaShop\obj\Debug\MultimediaShop.csprojResolveAssemblyReference.cache
+D:\My Documents\workspace\SoftUni-OOP\MultimediaShop\MultimediaShop\obj\Debug\LabMultimediaSystem.exe
+D:\My Documents\workspace\SoftUni-OOP\MultimediaShop\MultimediaShop\obj\Debug\LabMultimediaSystem.pdb

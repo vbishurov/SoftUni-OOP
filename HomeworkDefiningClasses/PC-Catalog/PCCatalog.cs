@@ -21,7 +21,7 @@
 
             List<Computer> computers = new List<Computer>() { compIntel, compAMD };
 
-            computers.OrderBy(e => e.Price).ToList().ForEach(e => Console.WriteLine(e.ToString()));
+            computers.OrderBy(e => e.Price).ToList().ForEach(Console.WriteLine);
         }
     }
 }
