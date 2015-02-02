@@ -5,26 +5,26 @@
 
     internal class Rent : IRent
     {
-        private Item item;
+        private IItem item;
 
-        public Rent(Item item, DateTime rentDate, DateTime deadline)
+        public Rent(IItem item, DateTime rentDate, DateTime deadline)
         {
             this.Item = item;
             this.RentDate = rentDate;
             this.Deadline = deadline;
         }
 
-        public Rent(Item item, DateTime rentDate)
+        public Rent(IItem item, DateTime rentDate)
             : this(item, rentDate, rentDate.AddDays(30))
         {
         }
 
-        public Rent(Item item)
+        public Rent(IItem item)
             : this(item, DateTime.Now, DateTime.Now.AddDays(30))
         {
         }
 
-        public Item Item
+        public IItem Item
         {
             get
             {

@@ -3,9 +3,9 @@
     using System;
     using Models;
 
-    internal interface ISale
+    public interface ISale
     {
-        Item Item { get; }
+        IItem Item { get; }
 
         DateTime SaleDate { get; }
     }

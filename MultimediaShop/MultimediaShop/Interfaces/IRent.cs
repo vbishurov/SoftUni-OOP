@@ -1,11 +1,10 @@
 ﻿namespace MultimediaShop.Interfaces
 {
     using System;
-    using Models;
 
     internal interface IRent
     {
-        Item Item { get; }
+        IItem Item { get; }
 
         RentState RentState { get; }
 

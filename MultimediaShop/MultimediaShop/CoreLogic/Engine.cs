@@ -10,7 +10,7 @@ namespace MultimediaShop.CoreLogic
 
     internal class Engine
     {
-        private readonly Dictionary<IItem, int> itemSupplies = new Dictionary<IItem, int>();
+        private static readonly Dictionary<IItem, int> itemSupplies = new Dictionary<IItem, int>();
 
         public void Run()
         {
@@ -22,7 +22,7 @@ namespace MultimediaShop.CoreLogic
                 {
                     case "supply": Supply(commandSplitted[1], commandSplitted[2], commandSplitted[3]);
                         break;
-                    case "sell": Sell(commandSplitted[1]);
+                    case "sell": Sell(commandSplitted[1], commandSplitted[2]);
                         break;
                     case "rent": Rent(commandSplitted[1], commandSplitted[2], commandSplitted[3]);
                         break;
@@ -47,30 +47,42 @@ namespace MultimediaShop.CoreLogic
             }
         }
 
-        private void Sell(string id)
+        private void Sell(string id, string saleDate)
         {
-            IItem key = this.itemSupplies.Keys.First(p => p.Id == id);
-            this.itemSupplies[key]--;
-            if (this.itemSupplies[key] == 0)
+            IItem key = Engine.itemSupplies.Keys.First(p => p.Id == id);
+            if (Engine.itemSupplies[key] < 1)
             {
-                this.itemSupplies.Remove(key);
+                throw new InsufficientSuppliesException();
+            }
+
+            SaleManager.AddItem(id, saleDate);
+            Engine.itemSupplies[key]--;
+            if (Engine.itemSupplies[key] == 0)
+            {
+                Engine.itemSupplies.Remove(key);
             }
         }
 
         private void Rent(string id, string rentDate, string deadline)
         {
-            IItem key = this.itemSupplies.Keys.First(p => p.Id == id);
-            this.itemSupplies[key]--;
-            if (this.itemSupplies[key] == 0)
+            IItem key = Engine.itemSupplies.Keys.First(p => p.Id == id);
+            if (Engine.itemSupplies[key] < 1)
             {
-                this.itemSupplies.Remove(key);
+                throw new InsufficientSuppliesException();
+            }
+
+            RentManager.AddRent(id, rentDate, deadline);
+            Engine.itemSupplies[key]--;
+            if (Engine.itemSupplies[key] == 0)
+            {
+                Engine.itemSupplies.Remove(key);
             }
         }
 
         private void Return(string id)
         {
-            IItem key = this.itemSupplies.Keys.First(p => p.Id == id);
-            this.itemSupplies[key]++;
+            IItem key = Engine.itemSupplies.Keys.First(p => p.Id == id);
+            Engine.itemSupplies[key]++;
         }
 
         private void SupplyMovies(int quantity, Dictionary<string, string> keyValuePairs)
@@ -80,7 +92,7 @@ namespace MultimediaShop.CoreLogic
             decimal price = decimal.Parse(keyValuePairs["price"], NumberFormatInfo.InvariantInfo);
             double length = double.Parse(keyValuePairs["length"], NumberFormatInfo.InvariantInfo);
             string genre = keyValuePairs["genre"];
-            this.itemSupplies.Add(
+            Engine.itemSupplies.Add(
                 new Movie(id, title, price, length, genre), quantity);
         }
 
@@ -101,7 +113,7 @@ namespace MultimediaShop.CoreLogic
                 case "adult": ageRestriction = AgeRestriction.Adult;
                     break;
             }
-            this.itemSupplies.Add(
+            Engine.itemSupplies.Add(
                 new Game(id, title, price, genre, ageRestriction), quantity);
         }
 
@@ -112,7 +124,7 @@ namespace MultimediaShop.CoreLogic
             decimal price = decimal.Parse(keyValuePairs["price"], NumberFormatInfo.InvariantInfo);
             string author = keyValuePairs["author"];
             string genre = keyValuePairs["genre"];
-            this.itemSupplies.Add(
+            Engine.itemSupplies.Add(
                 new Book(id, title, price, author, genre), quantity);
         }
 
@@ -127,6 +139,11 @@ namespace MultimediaShop.CoreLogic
             }
 
             return keyValuePairs;
+        }
+
+        public static IItem GetItemById(string id)
+        {
+            return Engine.itemSupplies.FirstOrDefault(p => p.Key.Id == id).Key;
         }
     }
 }

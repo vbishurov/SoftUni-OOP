@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CoreLogic\Engine.cs" />
+    <Compile Include="CoreLogic\InsufficientSuppliesException.cs" />
     <Compile Include="CoreLogic\RentManager.cs" />
     <Compile Include="CoreLogic\SaleManager.cs" />
     <Compile Include="Models\AgeRestriction.cs" />

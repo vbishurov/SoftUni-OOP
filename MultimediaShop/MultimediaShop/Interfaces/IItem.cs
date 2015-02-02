@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    internal interface IItem
+    public interface IItem
     {
         string Id { get; }
 

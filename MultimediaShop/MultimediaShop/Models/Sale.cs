@@ -5,9 +5,9 @@
 
     internal class Sale : ISale
     {
-        private Item item;
+        private IItem item;
 
-        public Sale(Item item, DateTime saleDate)
+        public Sale(IItem item, DateTime saleDate)
         {
             this.Item = item;
             this.SaleDate = saleDate;
@@ -18,7 +18,7 @@
         {
         }
 
-        public Item Item
+        public IItem Item
         {
             get
             {
