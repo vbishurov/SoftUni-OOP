@@ -1,6 +1,8 @@
-﻿namespace MultimediaShop.Models
+﻿namespace MultimediaShop.Models.Items
 {
     using System.Collections.Generic;
+    using System.Text;
+    using Enums;
 
     internal class Game : Item
     {
@@ -16,5 +18,13 @@
         }
 
         private AgeRestriction AgeRestriction { get; set; }
+
+        public override string ToString()
+        {
+            var b = new StringBuilder();
+            b.AppendLine(base.ToString());
+            b.Append("Age Restriction: " + this.AgeRestriction);
+            return b.ToString();
+        }
     }
 }

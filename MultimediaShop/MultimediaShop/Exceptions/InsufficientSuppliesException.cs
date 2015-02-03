@@ -1,4 +1,4 @@
-﻿namespace MultimediaShop.CoreLogic
+﻿namespace MultimediaShop.Exceptions
 {
     using System;
 

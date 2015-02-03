@@ -1,7 +1,6 @@
 ﻿namespace MultimediaShop.Interfaces
 {
     using System;
-    using Models;
 
     public interface ISale
     {

@@ -1,7 +1,8 @@
-﻿namespace MultimediaShop.Models
+﻿namespace MultimediaShop.Models.Items
 {
     using System;
     using System.Collections.Generic;
+    using System.Text;
     using Interfaces;
 
     internal abstract class Item : IItem
@@ -78,5 +79,28 @@
         }
 
         public List<string> Genres { get; private set; }
+
+        public override string ToString()
+        {
+            var b = new StringBuilder();
+            if (this is Book)
+            {
+                b.Append("Book: ");
+            }
+            else if (this is Game)
+            {
+                b.Append("Game: ");
+            }
+            else
+            {
+                b.Append("Movie: ");
+            }
+
+            b.AppendLine(this.Id);
+            b.AppendLine("Title: " + this.Title);
+            b.AppendLine("Price: " + this.Price);
+            b.Append("Genres: " + string.Join(", ", this.Genres));
+            return b.ToString();
+        }
     }
 }

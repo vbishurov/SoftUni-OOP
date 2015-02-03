@@ -1,19 +1,13 @@
 ﻿namespace MultimediaShop.Interfaces
 {
-    using System;
+    using Models.Enums;
 
     internal interface IRent
     {
         IItem Item { get; }
 
+        decimal RentFine { get; }
+
         RentState RentState { get; }
-
-        DateTime RentDate { get; }
-
-        DateTime Deadline { get; }
-
-        DateTime ReturnDate { get; }
-
-        decimal CalculateRentFine();
     }
 }

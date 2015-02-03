@@ -1,6 +1,8 @@
 ﻿namespace MultimediaShop.Models
 {
     using System;
+    using System.Text;
+    using Enums;
     using Interfaces;
 
     internal class Rent : IRent
@@ -46,9 +48,19 @@
         {
             get
             {
-                decimal finePerDay = 0.01m * this.Item.Price;
-                TimeSpan difference = this.ReturnDate - this.Deadline;
-                return difference.Days * finePerDay;
+                var finePerDay = 0.01m * this.Item.Price;
+                TimeSpan difference;
+                switch (this.RentState)
+                {
+                    case RentState.Returned:
+                        difference = this.ReturnDate - this.Deadline;
+                        return difference.Days * finePerDay;
+                    case RentState.Overdue:
+                        difference = DateTime.Now - this.Deadline;
+                        return difference.Days * finePerDay;
+                    default:
+                        return 0;
+                }
             }
         }
 
@@ -65,29 +77,30 @@
             }
         }
 
-        public DateTime RentDate { get; private set; }
-
-        public DateTime Deadline { get; private set; }
-
         public DateTime ReturnDate { get; private set; }
+
+        private DateTime RentDate { get; set; }
+
+        private DateTime Deadline { get; set; }
 
         public void ReturnItem()
         {
             this.ReturnDate = DateTime.Now;
         }
 
-        public decimal CalculateRentFine()
+        public override string ToString()
         {
-            if (this.RentState == RentState.Overdue)
+            var b = new StringBuilder();
+            b.AppendLine("Rent: " + this.RentState);
+            b.Append(this.Item);
+            if (this.RentFine <= 0)
             {
-                decimal finePerDay = 0.01m * this.Item.Price;
-                TimeSpan difference = this.ReturnDate - this.Deadline;
-                return difference.Days * finePerDay;
+                return b.ToString();
             }
-            else
-            {
-                return 0;
-            }
+
+            b.AppendLine();
+            b.Append("Rent Fine: " + this.RentFine);
+            return b.ToString();
         }
     }
 }

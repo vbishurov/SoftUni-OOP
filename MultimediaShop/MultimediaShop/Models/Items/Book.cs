@@ -1,7 +1,8 @@
-﻿namespace MultimediaShop.Models
+﻿namespace MultimediaShop.Models.Items
 {
     using System;
     using System.Collections.Generic;
+    using System.Text;
 
     internal class Book : Item
     {
@@ -18,14 +19,14 @@
         {
         }
 
-        public string Author
+        private string Author
         {
             get
             {
                 return this.author;
             }
 
-            private set
+            set
             {
                 if (string.IsNullOrWhiteSpace(value) || value.Length < 3)
                 {
@@ -34,6 +35,14 @@
 
                 this.author = value;
             }
+        }
+
+        public override string ToString()
+        {
+            var b = new StringBuilder();
+            b.AppendLine(base.ToString());
+            b.Append("Author: " + this.Author);
+            return b.ToString();
         }
     }
 }

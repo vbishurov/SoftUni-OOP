@@ -42,18 +42,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CoreLogic\Engine.cs" />
-    <Compile Include="CoreLogic\InsufficientSuppliesException.cs" />
+    <Compile Include="Exceptions\InsufficientSuppliesException.cs" />
     <Compile Include="CoreLogic\RentManager.cs" />
     <Compile Include="CoreLogic\SaleManager.cs" />
-    <Compile Include="Models\AgeRestriction.cs" />
-    <Compile Include="Models\RentState.cs" />
+    <Compile Include="Models\Enums\AgeRestriction.cs" />
+    <Compile Include="Models\Enums\RentState.cs" />
     <Compile Include="Interfaces\IItem.cs" />
     <Compile Include="Interfaces\IRent.cs" />
     <Compile Include="Interfaces\ISale.cs" />
-    <Compile Include="Models\Book.cs" />
-    <Compile Include="Models\Game.cs" />
-    <Compile Include="Models\Item.cs" />
-    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Items\Book.cs" />
+    <Compile Include="Models\Items\Game.cs" />
+    <Compile Include="Models\Items\Item.cs" />
+    <Compile Include="Models\Items\Movie.cs" />
     <Compile Include="LabMain.cs" />
     <Compile Include="Models\Rent.cs" />
     <Compile Include="Models\Sale.cs" />

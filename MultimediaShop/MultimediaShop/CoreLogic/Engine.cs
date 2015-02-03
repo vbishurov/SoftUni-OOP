@@ -1,109 +1,137 @@
-﻿using System.Globalization;
-using System.Linq;
-using MultimediaShop.Models;
-
-namespace MultimediaShop.CoreLogic
+﻿namespace MultimediaShop.CoreLogic
 {
     using System;
     using System.Collections.Generic;
+    using System.Globalization;
+    using System.Linq;
+    using Exceptions;
     using Interfaces;
+    using Models.Enums;
+    using Models.Items;
 
     internal class Engine
     {
-        private static readonly Dictionary<IItem, int> itemSupplies = new Dictionary<IItem, int>();
+        private static readonly Dictionary<IItem, int> ItemSupplies = new Dictionary<IItem, int>();
+
+        public static IItem GetItemById(string id)
+        {
+            return Engine.ItemSupplies.FirstOrDefault(p => p.Key.Id == id).Key;
+        }
 
         public void Run()
         {
             while (true)
             {
-                string command = Console.ReadLine();
-                string[] commandSplitted = command.Split(new char[] { ' ' }, 4);
+                var command = Console.ReadLine();
+                var commandSplitted = command.Split(new [] { ' ' }, 4);
                 switch (commandSplitted[0])
                 {
-                    case "supply": Supply(commandSplitted[1], commandSplitted[2], commandSplitted[3]);
+                    case "supply": Engine.Supply(commandSplitted[1], commandSplitted[2], commandSplitted[3]);
                         break;
-                    case "sell": Sell(commandSplitted[1], commandSplitted[2]);
+                    case "sell": Engine.Sell(commandSplitted[1], commandSplitted[2]);
                         break;
-                    case "rent": Rent(commandSplitted[1], commandSplitted[2], commandSplitted[3]);
+                    case "rent": Engine.Rent(commandSplitted[1], commandSplitted[2], commandSplitted[3]);
                         break;
-                    case "return": Return(commandSplitted[1]);
+                    case "return": Engine.Return(commandSplitted[1]);
+                        break;
+                    case "report":
+                        Engine.Report(commandSplitted);
                         break;
                 }
             }
         }
 
-        private void Supply(string type, string quantity, string parameters)
+        private static void Report(string[] commandSplitted)
         {
-            Dictionary<string, string> keyValuePairs = ExtractKeyValuePairs(parameters);
-            switch (type)
+            switch (commandSplitted[1])
             {
-                case "book": SupplyBooks(int.Parse(quantity), keyValuePairs);
+                case "rents":
+                    Engine.ReportRents();
                     break;
-                case "game": SupplyGames(int.Parse(quantity), keyValuePairs);
-                    break;
-                case "movie":
-                case "video": SupplyMovies(int.Parse(quantity), keyValuePairs);
+                case "sales":
+                    Engine.ReportTotalSaleAmount(commandSplitted[2]);
                     break;
             }
         }
 
-        private void Sell(string id, string saleDate)
+        private static void ReportTotalSaleAmount(string startDate)
         {
-            IItem key = Engine.itemSupplies.Keys.First(p => p.Id == id);
-            if (Engine.itemSupplies[key] < 1)
+            decimal sum = 0;
+            var salesAfterDate = SaleManager.GetSalesAfter(DateTime.Parse(startDate));
+            salesAfterDate.ForEach(p => sum += p.Item.Price);
+            Console.WriteLine(sum.ToString(new CultureInfo("en-US")));
+        }
+
+        private static void ReportRents()
+        {
+            Console.WriteLine();
+            RentManager.GetOverdueRents().ForEach(p => Console.WriteLine(p + Environment.NewLine));
+        }
+
+        private static void Supply(string type, string quantity, string parameters)
+        {
+            var keyValuePairs = Engine.ExtractKeyValuePairs(parameters);
+            switch (type)
+            {
+                case "book": Engine.SupplyBooks(int.Parse(quantity), keyValuePairs);
+                    break;
+                case "game": Engine.SupplyGames(int.Parse(quantity), keyValuePairs);
+                    break;
+                case "movie":
+                case "video": Engine.SupplyMovies(int.Parse(quantity), keyValuePairs);
+                    break;
+            }
+        }
+
+        private static void Sell(string id, string saleDate)
+        {
+            var key = Engine.ItemSupplies.Keys.FirstOrDefault(p => p.Id == id);
+            if (Engine.ItemSupplies[key] < 1)
             {
                 throw new InsufficientSuppliesException();
             }
 
             SaleManager.AddItem(id, saleDate);
-            Engine.itemSupplies[key]--;
-            if (Engine.itemSupplies[key] == 0)
-            {
-                Engine.itemSupplies.Remove(key);
-            }
+            Engine.ItemSupplies[key]--;
         }
 
-        private void Rent(string id, string rentDate, string deadline)
+        private static void Rent(string id, string rentDate, string deadline)
         {
-            IItem key = Engine.itemSupplies.Keys.First(p => p.Id == id);
-            if (Engine.itemSupplies[key] < 1)
+            var key = Engine.GetItemById(id);
+            if (Engine.ItemSupplies[key] < 1)
             {
                 throw new InsufficientSuppliesException();
             }
 
             RentManager.AddRent(id, rentDate, deadline);
-            Engine.itemSupplies[key]--;
-            if (Engine.itemSupplies[key] == 0)
-            {
-                Engine.itemSupplies.Remove(key);
-            }
+            Engine.ItemSupplies[key]--;
         }
 
-        private void Return(string id)
+        private static void Return(string id)
         {
-            IItem key = Engine.itemSupplies.Keys.First(p => p.Id == id);
-            Engine.itemSupplies[key]++;
+            var key = Engine.GetItemById(id);
+            Engine.ItemSupplies[key]++;
         }
 
-        private void SupplyMovies(int quantity, Dictionary<string, string> keyValuePairs)
+        private static void SupplyMovies(int quantity, Dictionary<string, string> keyValuePairs)
         {
-            string id = keyValuePairs["id"];
-            string title = keyValuePairs["title"];
-            decimal price = decimal.Parse(keyValuePairs["price"], NumberFormatInfo.InvariantInfo);
-            double length = double.Parse(keyValuePairs["length"], NumberFormatInfo.InvariantInfo);
-            string genre = keyValuePairs["genre"];
-            Engine.itemSupplies.Add(
+            var id = keyValuePairs["id"];
+            var title = keyValuePairs["title"];
+            var price = decimal.Parse(keyValuePairs["price"], NumberFormatInfo.InvariantInfo);
+            var length = double.Parse(keyValuePairs["length"], NumberFormatInfo.InvariantInfo);
+            var genre = keyValuePairs["genre"];
+            Engine.ItemSupplies.Add(
                 new Movie(id, title, price, length, genre), quantity);
         }
 
-        private void SupplyGames(int quantity, Dictionary<string, string> keyValuePairs)
+        private static void SupplyGames(int quantity, Dictionary<string, string> keyValuePairs)
         {
-            string id = keyValuePairs["id"];
-            string title = keyValuePairs["title"];
-            decimal price = decimal.Parse(keyValuePairs["price"], NumberFormatInfo.InvariantInfo);
-            string genre = keyValuePairs["genre"];
-            string ageRestrictionString = keyValuePairs["ageRestriction"];
-            AgeRestriction ageRestriction = AgeRestriction.Minor;
+            var id = keyValuePairs["id"];
+            var title = keyValuePairs["title"];
+            var price = decimal.Parse(keyValuePairs["price"], NumberFormatInfo.InvariantInfo);
+            var genre = keyValuePairs["genre"];
+            var ageRestrictionString = keyValuePairs["ageRestriction"];
+            var ageRestriction = AgeRestriction.Minor;
             switch (ageRestrictionString)
             {
                 case "minor": ageRestriction = AgeRestriction.Minor;
@@ -113,37 +141,27 @@ namespace MultimediaShop.CoreLogic
                 case "adult": ageRestriction = AgeRestriction.Adult;
                     break;
             }
-            Engine.itemSupplies.Add(
+
+            Engine.ItemSupplies.Add(
                 new Game(id, title, price, genre, ageRestriction), quantity);
         }
 
-        private void SupplyBooks(int quantity, Dictionary<string, string> keyValuePairs)
+        private static void SupplyBooks(int quantity, Dictionary<string, string> keyValuePairs)
         {
-            string id = keyValuePairs["id"];
-            string title = keyValuePairs["title"];
-            decimal price = decimal.Parse(keyValuePairs["price"], NumberFormatInfo.InvariantInfo);
-            string author = keyValuePairs["author"];
-            string genre = keyValuePairs["genre"];
-            Engine.itemSupplies.Add(
+            var id = keyValuePairs["id"];
+            var title = keyValuePairs["title"];
+            var price = decimal.Parse(keyValuePairs["price"], NumberFormatInfo.InvariantInfo);
+            var author = keyValuePairs["author"];
+            var genre = keyValuePairs["genre"];
+            Engine.ItemSupplies.Add(
                 new Book(id, title, price, author, genre), quantity);
         }
 
-        private Dictionary<string, string> ExtractKeyValuePairs(string query)
+        private static Dictionary<string, string> ExtractKeyValuePairs(string query)
         {
-            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
-            string[] paramsString = query.Split('&');
-            foreach (string pair in paramsString)
-            {
-                string[] keyValuePair = pair.Split('=');
-                keyValuePairs.Add(keyValuePair[0], keyValuePair[1]);
-            }
-
-            return keyValuePairs;
-        }
-
-        public static IItem GetItemById(string id)
-        {
-            return Engine.itemSupplies.FirstOrDefault(p => p.Key.Id == id).Key;
+            var paramsString = query.Split('&');
+            var pairs = paramsString.Select(pair => pair.Split('='));
+            return pairs.ToDictionary(keyValuePair => keyValuePair[0], keyValuePair => keyValuePair[1]);
         }
     }
 }

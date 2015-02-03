@@ -1,7 +1,9 @@
 ﻿namespace MultimediaShop.Models
 {
     using System;
+    using System.Text;
     using Interfaces;
+    using Items;
 
     internal class Sale : ISale
     {
@@ -37,5 +39,13 @@
         }
 
         public DateTime SaleDate { get; private set; }
+
+        public override string ToString()
+        {
+            var b = new StringBuilder();
+            b.AppendLine("Sale: " + this.SaleDate);
+            b.Append(this.Item.ToString());
+            return b.ToString();
+        }
     }
 }
