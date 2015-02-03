@@ -23,38 +23,38 @@
             while (true)
             {
                 var command = Console.ReadLine();
-                var commandSplitted = command.Split(new [] { ' ' }, 4);
+                var commandSplitted = command.Split(new[] { ' ' }, 4);
                 switch (commandSplitted[0])
                 {
-                    case "supply": Engine.Supply(commandSplitted[1], commandSplitted[2], commandSplitted[3]);
+                    case "supply": this.Supply(commandSplitted[1], commandSplitted[2], commandSplitted[3]);
                         break;
-                    case "sell": Engine.Sell(commandSplitted[1], commandSplitted[2]);
+                    case "sell": this.Sell(commandSplitted[1], commandSplitted[2]);
                         break;
-                    case "rent": Engine.Rent(commandSplitted[1], commandSplitted[2], commandSplitted[3]);
+                    case "rent": this.Rent(commandSplitted[1], commandSplitted[2], commandSplitted[3]);
                         break;
-                    case "return": Engine.Return(commandSplitted[1]);
+                    case "return": this.Return(commandSplitted[1]);
                         break;
                     case "report":
-                        Engine.Report(commandSplitted);
+                        this.Report(commandSplitted);
                         break;
                 }
             }
         }
 
-        private static void Report(string[] commandSplitted)
+        private void Report(string[] commandSplitted)
         {
             switch (commandSplitted[1])
             {
                 case "rents":
-                    Engine.ReportRents();
+                    this.ReportRents();
                     break;
                 case "sales":
-                    Engine.ReportTotalSaleAmount(commandSplitted[2]);
+                    this.ReportTotalSaleAmount(commandSplitted[2]);
                     break;
             }
         }
 
-        private static void ReportTotalSaleAmount(string startDate)
+        private void ReportTotalSaleAmount(string startDate)
         {
             decimal sum = 0;
             var salesAfterDate = SaleManager.GetSalesAfter(DateTime.Parse(startDate));
@@ -62,28 +62,28 @@
             Console.WriteLine(sum.ToString(new CultureInfo("en-US")));
         }
 
-        private static void ReportRents()
+        private void ReportRents()
         {
             Console.WriteLine();
             RentManager.GetOverdueRents().ForEach(p => Console.WriteLine(p + Environment.NewLine));
         }
 
-        private static void Supply(string type, string quantity, string parameters)
+        private void Supply(string type, string quantity, string parameters)
         {
-            var keyValuePairs = Engine.ExtractKeyValuePairs(parameters);
+            var keyValuePairs = this.ExtractKeyValuePairs(parameters);
             switch (type)
             {
-                case "book": Engine.SupplyBooks(int.Parse(quantity), keyValuePairs);
+                case "book": this.SupplyBooks(int.Parse(quantity), keyValuePairs);
                     break;
-                case "game": Engine.SupplyGames(int.Parse(quantity), keyValuePairs);
+                case "game": this.SupplyGames(int.Parse(quantity), keyValuePairs);
                     break;
                 case "movie":
-                case "video": Engine.SupplyMovies(int.Parse(quantity), keyValuePairs);
+                case "video": this.SupplyMovies(int.Parse(quantity), keyValuePairs);
                     break;
             }
         }
 
-        private static void Sell(string id, string saleDate)
+        private void Sell(string id, string saleDate)
         {
             var key = Engine.ItemSupplies.Keys.FirstOrDefault(p => p.Id == id);
             if (Engine.ItemSupplies[key] < 1)
@@ -95,7 +95,7 @@
             Engine.ItemSupplies[key]--;
         }
 
-        private static void Rent(string id, string rentDate, string deadline)
+        private void Rent(string id, string rentDate, string deadline)
         {
             var key = Engine.GetItemById(id);
             if (Engine.ItemSupplies[key] < 1)
@@ -107,13 +107,13 @@
             Engine.ItemSupplies[key]--;
         }
 
-        private static void Return(string id)
+        private void Return(string id)
         {
             var key = Engine.GetItemById(id);
             Engine.ItemSupplies[key]++;
         }
 
-        private static void SupplyMovies(int quantity, Dictionary<string, string> keyValuePairs)
+        private void SupplyMovies(int quantity, Dictionary<string, string> keyValuePairs)
         {
             var id = keyValuePairs["id"];
             var title = keyValuePairs["title"];
@@ -124,7 +124,7 @@
                 new Movie(id, title, price, length, genre), quantity);
         }
 
-        private static void SupplyGames(int quantity, Dictionary<string, string> keyValuePairs)
+        private void SupplyGames(int quantity, Dictionary<string, string> keyValuePairs)
         {
             var id = keyValuePairs["id"];
             var title = keyValuePairs["title"];
@@ -146,7 +146,7 @@
                 new Game(id, title, price, genre, ageRestriction), quantity);
         }
 
-        private static void SupplyBooks(int quantity, Dictionary<string, string> keyValuePairs)
+        private void SupplyBooks(int quantity, Dictionary<string, string> keyValuePairs)
         {
             var id = keyValuePairs["id"];
             var title = keyValuePairs["title"];
@@ -157,7 +157,7 @@
                 new Book(id, title, price, author, genre), quantity);
         }
 
-        private static Dictionary<string, string> ExtractKeyValuePairs(string query)
+        private Dictionary<string, string> ExtractKeyValuePairs(string query)
         {
             var paramsString = query.Split('&');
             var pairs = paramsString.Select(pair => pair.Split('='));
