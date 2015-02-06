@@ -1,0 +1,5 @@
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDelegatesEvents\StudentClass\bin\Debug\StudentClass.exe.config
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDelegatesEvents\StudentClass\bin\Debug\StudentClass.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDelegatesEvents\StudentClass\bin\Debug\StudentClass.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDelegatesEvents\StudentClass\obj\Debug\StudentClass.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkDelegatesEvents\StudentClass\obj\Debug\StudentClass.pdb
