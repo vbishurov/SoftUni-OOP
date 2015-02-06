@@ -7,7 +7,7 @@
     {
         public static void Main()
         {
-            const string FileName = "../../SoftUni-OOP-Game-Contest";
+            const string FileName = "../../SoftUni-OOP-Game-Contest.docx";
 
             using (var doc = DocX.Create(FileName))
             {
