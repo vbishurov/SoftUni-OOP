@@ -1,0 +1,5 @@
+D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\TheSlum\obj\Debug\TheSlum.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\TheSlum\obj\Debug\TheSlum.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\TheSlum\bin\Debug\TheSlum.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\TheSlum\bin\Debug\TheSlum.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\TheSlum\obj\Debug\03.TheSlum.csprojResolveAssemblyReference.cache
