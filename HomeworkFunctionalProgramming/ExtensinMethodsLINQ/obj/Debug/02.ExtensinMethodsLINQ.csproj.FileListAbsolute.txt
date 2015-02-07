@@ -1,0 +1,5 @@
+D:\My Documents\workspace\SoftUni-OOP\HomeworkFunctionalProgramming\ExtensinMethodsLINQ\bin\Debug\ExtensinMethodsLINQ.exe.config
+D:\My Documents\workspace\SoftUni-OOP\HomeworkFunctionalProgramming\ExtensinMethodsLINQ\bin\Debug\ExtensinMethodsLINQ.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkFunctionalProgramming\ExtensinMethodsLINQ\bin\Debug\ExtensinMethodsLINQ.pdb
+D:\My Documents\workspace\SoftUni-OOP\HomeworkFunctionalProgramming\ExtensinMethodsLINQ\obj\Debug\ExtensinMethodsLINQ.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkFunctionalProgramming\ExtensinMethodsLINQ\obj\Debug\ExtensinMethodsLINQ.pdb

@@ -1,0 +1,3 @@
+D:\My Documents\workspace\SoftUni-OOP\HomeworkFunctionalProgramming\StringBuilderExtensions\bin\Debug\StringBuilderExtensions.exe.config
+D:\My Documents\workspace\SoftUni-OOP\HomeworkFunctionalProgramming\StringBuilderExtensions\obj\Debug\StringBuilderExtensions.exe
+D:\My Documents\workspace\SoftUni-OOP\HomeworkFunctionalProgramming\StringBuilderExtensions\obj\Debug\StringBuilderExtensions.pdb
