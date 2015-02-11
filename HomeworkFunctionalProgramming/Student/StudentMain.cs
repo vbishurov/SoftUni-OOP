@@ -10,24 +10,24 @@
     {
         public static void Main()
         {
-            List<Student> students = new List<Student>()
+            List<Student> students = new List<Student>
             {
-                new Student("Pesho", "Peshev", 20, "734015", "027886427", "Pesho@abv.bg", new List<int>() { 5, 6 }, 2, "Plovdiv")
+                new Student("Pesho", "Peshev", 20, "734015", "027886427", "Pesho@abv.bg", new List<int> { 5, 6 }, 2, "Plovdiv")
             };
 
             Random rnd = new Random();
 
             string[] groupNames = { "Plovdiv", "Sofia", "Varna", "Burgas", "Chinese", "Geeks", "Nerds", "Gamers", "Losers" };
 
-            var specialties = new List<StudentSpecialty>() 
+            var specialties = new List<StudentSpecialty>
             { 
-                new StudentSpecialty("Web Developer", rnd.Next(1000, 1100).ToString() + rnd.Next(10, 20).ToString()),
-                new StudentSpecialty("QA", rnd.Next(1000, 1100).ToString() + rnd.Next(10, 20).ToString()),
-                new StudentSpecialty("Web Developer", rnd.Next(1000, 1100).ToString() + rnd.Next(10, 20).ToString()),
-                new StudentSpecialty("QA", rnd.Next(1000, 1100).ToString() + rnd.Next(10, 20).ToString()),
-                new StudentSpecialty("Web Developer", rnd.Next(1000, 1100).ToString() + rnd.Next(10, 20).ToString()),
-                new StudentSpecialty("Java Developer", rnd.Next(1000, 1100).ToString() + rnd.Next(10, 20).ToString()),
-                new StudentSpecialty("Java Developer", rnd.Next(1000, 1100).ToString() + rnd.Next(10, 20).ToString())
+                new StudentSpecialty("Web Developer", rnd.Next(1000, 1100) + rnd.Next(10, 20).ToString()),
+                new StudentSpecialty("QA", rnd.Next(1000, 1100) + rnd.Next(10, 20).ToString()),
+                new StudentSpecialty("Web Developer", rnd.Next(1000, 1100) + rnd.Next(10, 20).ToString()),
+                new StudentSpecialty("QA", rnd.Next(1000, 1100) + rnd.Next(10, 20).ToString()),
+                new StudentSpecialty("Web Developer", rnd.Next(1000, 1100) + rnd.Next(10, 20).ToString()),
+                new StudentSpecialty("Java Developer", rnd.Next(1000, 1100) + rnd.Next(10, 20).ToString()),
+                new StudentSpecialty("Java Developer", rnd.Next(1000, 1100) + rnd.Next(10, 20).ToString())
             };
 
             using (StreamReader reader = new StreamReader("../../Students-data.txt"))
@@ -41,10 +41,10 @@
                         student[1],
                         student[2],
                         (byte)rnd.Next(0, 100),
-                        rnd.Next(1000, 1100).ToString() + rnd.Next(10, 20).ToString(),
-                        "+" + rnd.Next(350, 380).ToString() + "2" + rnd.Next(100000, 999999),
+                        rnd.Next(1000, 1100) + rnd.Next(10, 20).ToString(),
+                        "+" + rnd.Next(350, 380) + "2" + rnd.Next(100000, 999999),
                         student[3],
-                        new List<int>() { rnd.Next(2, 6), rnd.Next(2, 7), rnd.Next(2, 6), rnd.Next(2, 6) },
+                        new List<int> { rnd.Next(2, 6), rnd.Next(2, 7), rnd.Next(2, 6), rnd.Next(2, 6) },
                         rnd.Next(0, 100),
                         groupNames[rnd.Next(0, groupNames.Length)]));
 

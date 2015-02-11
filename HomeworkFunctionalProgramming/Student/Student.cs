@@ -1,7 +1,6 @@
 ﻿namespace Student
 {
     using System.Collections.Generic;
-    using System.Text;
 
     public class Student
     {
