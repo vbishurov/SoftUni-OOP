@@ -1,0 +1,6 @@
+D:\Downloads\Skeleton\Skeleton\EnvironmentSystem\bin\Debug\EnvironmentSystem.exe.config
+D:\Downloads\Skeleton\Skeleton\EnvironmentSystem\bin\Debug\EnvironmentSystem.exe
+D:\Downloads\Skeleton\Skeleton\EnvironmentSystem\bin\Debug\EnvironmentSystem.pdb
+D:\Downloads\Skeleton\Skeleton\EnvironmentSystem\obj\Debug\EnvironmentSystem.csprojResolveAssemblyReference.cache
+D:\Downloads\Skeleton\Skeleton\EnvironmentSystem\obj\Debug\EnvironmentSystem.exe
+D:\Downloads\Skeleton\Skeleton\EnvironmentSystem\obj\Debug\EnvironmentSystem.pdb

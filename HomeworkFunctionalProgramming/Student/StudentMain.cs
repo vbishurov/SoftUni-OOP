@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
+    using System.Runtime.InteropServices;
     using System.Text.RegularExpressions;
 
     public static class StudentMain
@@ -96,8 +97,8 @@
             // result.ForEach(s => Console.WriteLine(s.FirstName + " " + s.LastName + ", " + string.Join(", ", s.Marks)));
 
             ////Problem 12
-            // var result = students.Where(s => Regex.IsMatch(s.FacultyNumber, @"\d\d\d\d14")).ToList();
-            // result.ForEach(s => Console.WriteLine("Name: {0} {1}, {2}", s.FirstName, s.LastName, s.FacultyNumber));
+            //var result = students.Where(s => Regex.IsMatch(s.FacultyNumber, @"\d\d\d\d14")).Select(s => s.Marks).ToList();
+            //result.ForEach(s => Console.WriteLine(string.Join(", ", s)));
 
             ////Problem 13
             // var result = from student in students
