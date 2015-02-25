@@ -43,5 +43,7 @@ Temporary Items
 .apdisk
 \.metadata
 \.idea
+\bin
+\obj
 \.git
 *.iml
