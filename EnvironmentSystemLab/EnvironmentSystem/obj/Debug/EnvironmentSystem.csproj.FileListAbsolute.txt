@@ -4,3 +4,6 @@ D:\Downloads\Skeleton\Skeleton\EnvironmentSystem\bin\Debug\EnvironmentSystem.pdb
 D:\Downloads\Skeleton\Skeleton\EnvironmentSystem\obj\Debug\EnvironmentSystem.csprojResolveAssemblyReference.cache
 D:\Downloads\Skeleton\Skeleton\EnvironmentSystem\obj\Debug\EnvironmentSystem.exe
 D:\Downloads\Skeleton\Skeleton\EnvironmentSystem\obj\Debug\EnvironmentSystem.pdb
+D:\My Documents\workspace\SoftUni-OOP\EnvironmentSystemLab\EnvironmentSystem\bin\Debug\EnvironmentSystem.exe.config
+D:\My Documents\workspace\SoftUni-OOP\EnvironmentSystemLab\EnvironmentSystem\obj\Debug\EnvironmentSystem.exe
+D:\My Documents\workspace\SoftUni-OOP\EnvironmentSystemLab\EnvironmentSystem\obj\Debug\EnvironmentSystem.pdb
