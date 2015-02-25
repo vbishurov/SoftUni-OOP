@@ -1,6 +1,0 @@
-D:\My Documents\workspace\SoftUni-OOP\HomeworkFunctionalProgramming\Student\bin\Debug\Student.exe.config
-D:\My Documents\workspace\SoftUni-OOP\HomeworkFunctionalProgramming\Student\bin\Debug\Student.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkFunctionalProgramming\Student\bin\Debug\Student.pdb
-D:\My Documents\workspace\SoftUni-OOP\HomeworkFunctionalProgramming\Student\obj\Debug\03.Student.csprojResolveAssemblyReference.cache
-D:\My Documents\workspace\SoftUni-OOP\HomeworkFunctionalProgramming\Student\obj\Debug\Student.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkFunctionalProgramming\Student\obj\Debug\Student.pdb

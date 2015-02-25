@@ -1,6 +1,0 @@
-D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\Shapes\bin\Debug\Shapes.exe.config
-D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\Shapes\bin\Debug\Shapes.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\Shapes\bin\Debug\Shapes.pdb
-D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\Shapes\obj\Debug\01.Shapes.csprojResolveAssemblyReference.cache
-D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\Shapes\obj\Debug\Shapes.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\Shapes\obj\Debug\Shapes.pdb

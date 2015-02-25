@@ -1,6 +1,0 @@
-D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\BankOfKurtovoKunare\bin\Debug\BankOfKurtovoKunare.exe.config
-D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\BankOfKurtovoKunare\bin\Debug\BankOfKurtovoKunare.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\BankOfKurtovoKunare\bin\Debug\BankOfKurtovoKunare.pdb
-D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\BankOfKurtovoKunare\obj\Debug\BankOfKurtovoKunare.csprojResolveAssemblyReference.cache
-D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\BankOfKurtovoKunare\obj\Debug\BankOfKurtovoKunare.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkEncapsulationPolymorphism\BankOfKurtovoKunare\obj\Debug\BankOfKurtovoKunare.pdb

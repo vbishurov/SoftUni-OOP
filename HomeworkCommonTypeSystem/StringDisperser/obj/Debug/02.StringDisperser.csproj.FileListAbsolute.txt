@@ -1,6 +1,0 @@
-D:\My Documents\workspace\SoftUni-OOP\HomeworkCommonTypeSystem\StringDisperser\bin\Debug\StringDisperser.exe.config
-D:\My Documents\workspace\SoftUni-OOP\HomeworkCommonTypeSystem\StringDisperser\bin\Debug\StringDisperser.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkCommonTypeSystem\StringDisperser\bin\Debug\StringDisperser.pdb
-D:\My Documents\workspace\SoftUni-OOP\HomeworkCommonTypeSystem\StringDisperser\obj\Debug\02.StringDisperser.csprojResolveAssemblyReference.cache
-D:\My Documents\workspace\SoftUni-OOP\HomeworkCommonTypeSystem\StringDisperser\obj\Debug\StringDisperser.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkCommonTypeSystem\StringDisperser\obj\Debug\StringDisperser.pdb

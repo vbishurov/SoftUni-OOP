@@ -1,6 +1,0 @@
-D:\My Documents\workspace\SoftUni-OOP\HomeworkExceptionHandling\EnterNumbers\bin\Debug\EnterNumbers.exe.config
-D:\My Documents\workspace\SoftUni-OOP\HomeworkExceptionHandling\EnterNumbers\bin\Debug\EnterNumbers.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkExceptionHandling\EnterNumbers\bin\Debug\EnterNumbers.pdb
-D:\My Documents\workspace\SoftUni-OOP\HomeworkExceptionHandling\EnterNumbers\obj\Debug\EnterNumbers.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkExceptionHandling\EnterNumbers\obj\Debug\EnterNumbers.pdb
-D:\My Documents\workspace\SoftUni-OOP\HomeworkExceptionHandling\EnterNumbers\obj\Debug\02.EnterNumbers.csprojResolveAssemblyReference.cache

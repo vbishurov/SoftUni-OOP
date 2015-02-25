@@ -1,7 +1,0 @@
-D:\My Documents\workspace\SoftUni-OOP\HomeworkOtherTypes\WordDocumentGenerator\bin\Debug\WordDocumentGenerator.exe.config
-D:\My Documents\workspace\SoftUni-OOP\HomeworkOtherTypes\WordDocumentGenerator\bin\Debug\WordDocumentGenerator.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkOtherTypes\WordDocumentGenerator\bin\Debug\WordDocumentGenerator.pdb
-D:\My Documents\workspace\SoftUni-OOP\HomeworkOtherTypes\WordDocumentGenerator\bin\Debug\DocX.dll
-D:\My Documents\workspace\SoftUni-OOP\HomeworkOtherTypes\WordDocumentGenerator\obj\Debug\WordDocumentGenerator.csprojResolveAssemblyReference.cache
-D:\My Documents\workspace\SoftUni-OOP\HomeworkOtherTypes\WordDocumentGenerator\obj\Debug\WordDocumentGenerator.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkOtherTypes\WordDocumentGenerator\obj\Debug\WordDocumentGenerator.pdb

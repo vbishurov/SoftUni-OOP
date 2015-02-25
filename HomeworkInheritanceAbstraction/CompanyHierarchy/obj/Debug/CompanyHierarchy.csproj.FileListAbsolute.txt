@@ -1,1 +1,0 @@
-D:\My Documents\workspace\SoftUni-OOP\HomeworkInheritanceAbstraction\CompanyHierarchy\bin\Debug\CompanyHierarchy.exe.config

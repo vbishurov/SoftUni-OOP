@@ -1,1 +1,0 @@
-D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\BitArray\bin\Debug\BitArray.exe.config

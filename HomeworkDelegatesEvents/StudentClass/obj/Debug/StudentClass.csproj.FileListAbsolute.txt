@@ -1,1 +1,0 @@
-D:\My Documents\workspace\SoftUni-OOP\HomeworkDelegatesEvents\StudentClass\bin\Debug\StudentClass.exe.config

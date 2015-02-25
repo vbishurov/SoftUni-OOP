@@ -1,2 +1,0 @@
-D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\DistanceCalculator\bin\Debug\DistanceCalculator.exe.config
-D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\DistanceCalculator\obj\Debug\DistanceCalculator.csprojResolveAssemblyReference.cache

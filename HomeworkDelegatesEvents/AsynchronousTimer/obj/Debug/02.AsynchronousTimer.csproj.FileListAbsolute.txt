@@ -1,5 +1,0 @@
-D:\My Documents\workspace\SoftUni-OOP\HomeworkDelegatesEvents\AsynchronousTimer\bin\Debug\AsynchronousTimer.exe.config
-D:\My Documents\workspace\SoftUni-OOP\HomeworkDelegatesEvents\AsynchronousTimer\bin\Debug\AsynchronousTimer.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkDelegatesEvents\AsynchronousTimer\bin\Debug\AsynchronousTimer.pdb
-D:\My Documents\workspace\SoftUni-OOP\HomeworkDelegatesEvents\AsynchronousTimer\obj\Debug\AsynchronousTimer.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkDelegatesEvents\AsynchronousTimer\obj\Debug\AsynchronousTimer.pdb

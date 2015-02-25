@@ -1,6 +1,0 @@
-D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\PC-Catalog\bin\Debug\PC-Catalog.exe.config
-D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\PC-Catalog\bin\Debug\PC-Catalog.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\PC-Catalog\bin\Debug\PC-Catalog.pdb
-D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\PC-Catalog\obj\Debug\PCCatalog.csprojResolveAssemblyReference.cache
-D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\PC-Catalog\obj\Debug\PC-Catalog.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkDefiningClasses\PC-Catalog\obj\Debug\PC-Catalog.pdb

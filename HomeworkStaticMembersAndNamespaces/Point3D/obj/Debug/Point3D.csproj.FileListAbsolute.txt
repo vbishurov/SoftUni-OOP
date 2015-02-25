@@ -1,1 +1,0 @@
-D:\My Documents\workspace\SoftUni-OOP\StaticMembersAndNamespaces\Point3D\bin\Debug\Point3D.exe.config

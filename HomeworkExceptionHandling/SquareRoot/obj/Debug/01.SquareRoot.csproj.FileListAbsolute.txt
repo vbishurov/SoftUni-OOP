@@ -1,6 +1,0 @@
-D:\My Documents\workspace\SoftUni-OOP\HomeworkExceptionHandling\SquareRoot\bin\Debug\SquareRoot.exe.config
-D:\My Documents\workspace\SoftUni-OOP\HomeworkExceptionHandling\SquareRoot\bin\Debug\SquareRoot.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkExceptionHandling\SquareRoot\bin\Debug\SquareRoot.pdb
-D:\My Documents\workspace\SoftUni-OOP\HomeworkExceptionHandling\SquareRoot\obj\Debug\01.SquareRoot.csprojResolveAssemblyReference.cache
-D:\My Documents\workspace\SoftUni-OOP\HomeworkExceptionHandling\SquareRoot\obj\Debug\SquareRoot.exe
-D:\My Documents\workspace\SoftUni-OOP\HomeworkExceptionHandling\SquareRoot\obj\Debug\SquareRoot.pdb
