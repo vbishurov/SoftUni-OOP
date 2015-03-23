@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="MusicShopManager.Interfaces.IAcousticGuitar">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IAcousticGuitar.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MusicShopManager.Interfaces.IArticle">
+    <Position X="5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAgAAAIAAAA=</HashCode>
+      <FileName>Interfaces\IArticle.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MusicShopManager.Interfaces.IDrums">
+    <Position X="7.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDrums.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MusicShopManager.Interfaces.IElectricGuitar">
+    <Position X="2.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IElectricGuitar.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MusicShopManager.Interfaces.IGuitar">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAQAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Interfaces\IGuitar.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MusicShopManager.Interfaces.IInstrument">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Interfaces\IInstrument.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MusicShopManager.Interfaces.IMicrophone">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Interfaces\IMicrophone.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MusicShopManager.Interfaces.IMusicShop" Collapsed="true">
+    <Position X="15.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAEAAAAAAAAAAAQAAAAAAAAAAAAAAIAEAAA=</HashCode>
+      <FileName>Interfaces\IMusicShop.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MusicShopManager.Interfaces.Engine.IArticleFactory" Collapsed="true">
+    <Position X="12" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAgAAAAAAAAAAAQAAAAAQAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Interfaces\Engine\IArticleFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MusicShopManager.Interfaces.Engine.ICommand" Collapsed="true">
+    <Position X="13.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Engine\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MusicShopManager.Interfaces.Engine.IMusicShopEngine" Collapsed="true">
+    <Position X="12" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Engine\IMusicShopEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MusicShopManager.Interfaces.Engine.IMusicShopFactory" Collapsed="true">
+    <Position X="13.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Engine\IMusicShopFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MusicShopManager.Interfaces.Engine.IUserInterface" Collapsed="true">
+    <Position X="15.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Engine\IUserInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MusicShopManager.Interfaces.IBassGuitar">
+    <Position X="5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBassGuitar.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

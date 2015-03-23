@@ -1,0 +1,38 @@
+﻿namespace Estates.Engine
+{
+    using System;
+    using System.Globalization;
+    using System.IO;
+    using System.Linq;
+    using System.Threading;
+    using Data;
+    using Interfaces;
+
+    class EstatesAgency
+    {
+        static void Main()
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
+            IEstateEngine estateEngine = EstateFactory.CreateEstateEngine();
+
+            while (true)
+            {
+                string commandLine = Console.ReadLine();
+                if (commandLine == null || commandLine == "end")
+                {
+                    // End of command sequence reached
+                    break;
+                }
+                if (commandLine != "")
+                {
+                    string[] commandTokens = commandLine.Split(' ');
+                    string cmd = commandTokens[0];
+                    string[] cmdArgs = (commandTokens.Skip(1)).ToArray();
+                    string cmdResult = estateEngine.ExecuteCommand(cmd, cmdArgs);
+                    Console.WriteLine(cmdResult);
+                }
+            }
+        }
+    }
+}
